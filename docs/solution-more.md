@@ -17,60 +17,57 @@ Magento domain name binding steps:
 
      <VirtualHost *:80>
      ServerName www.mydomain.com # modify it for you
-     DocumentRoot "/data/wwwroot/mediawiki"
+     DocumentRoot "/data/wwwroot/magento"
      ...
      
    #### Magento (LEMP) bind domain #### 
 
      server {
       listen 80;
-      server_name    mediawiki.example.com; # modify it for you
+      server_name    magento.example.com; # modify it for you
      ...
 
    ```
 3. Save it and restart [Web Service](/admin-services.md#apache)
 
 
-## Magento Configuration
+## Magento install modules
 
-Modify the `LocalSettings.php` to set Magento, and you should know settings is from `DefaultSettings.php`
+Below is the methods for you installing modules online
 
-Refer to Magento official docs: [Configuration settings](https://www.mediawiki.org/wiki/Manual:Configuration_settings/en)
+1. Make sure your Magento is [Linking Marketplace](/stack-installation.html#link-magento-marketplace)
+3. Search the modules on Marketplace, 【buy】it and【Install】 it
+4. Log in your Magento, open【SYSTEM】>【Web Setup Wizard】>【System Configration】 
+5. On the left memu, click 【EXTENSION MANAGER】>【Refresh】, synchronize the your purchase to your Magento, then【Review and Install】 it
+    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-theme-1-websoft9.png)
+   > Refresh not always successful, so please Refresh it repeatedly
+6. Select the modules in the catalog and install it
+    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-theme-2-websoft9.png)
+7. Magento will check the system environment before installation
+8. If installation is very slowly and have error, please refer to [Troubleshooting](/else-troubleshooting.html#magento-upgrade-or-install-module-failed)
 
-## Magento Extensions
 
-Refer to Magento official docs: [Manual:Extensions](https://www.mediawiki.org/wiki/Manual:Extensions/en)
+## Magento set language
 
-## Magento Create&Edit page
+1. Download language package
+1. Set language for Magento front page: go to Stores > Configuration > General > Local
+    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-setlan-websoft9.png)
+2. Set language for Magento backend page: go to Account Setting > Interface Local
+    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/magento/magento-adminlanguages-websoft9.png)
 
-Refer to Magento official docs: [Help:Starting_a_new_page](https://www.mediawiki.org/wiki/Help:Starting_a_new_page/en)
+## Magento Cache
 
-## Magento VisualEditor
+Cache is a important function for Magento
 
-Refer to Magento official docs: [Help:Starting_a_new_page](https://www.mediawiki.org/wiki/Help:VisualEditor/User_guide/en)
+1. Log in Magento, go to【System】>【Tools】> 【Cache Management】
+2. Select items
+3. Click 【Flush Magento Cache】and【Flush Cache Storage】to start 
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-flushcache-websoft9.png)
+4. You can cancel cache from here
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-dscache-websoft9.png)
 
-## Magento change interface
+## Magento API
 
-Changing interface includes: modify logo, set navigation, modify css and so on
+Support for both REST (Representational State Transfer) and SOAP (Simple Object Access Protocol). In Magento 2, the web API coverage is the same for both REST and SOAP.
 
-Refer to Magento official docs: [Help:FAQ:Changing Interface](https://www.mediawiki.org/wiki/Manual:FAQ#Changing_the_interface)
-
-## Magento Enable uploading files
-
-You can't upload files from Magento by default, you need to enable it first  
-
-Refer to Magento official docs: [Help:FAQ:Enabel Uploading](https://www.mediawiki.org/wiki/Manual:FAQ#How_do_I_enable_uploading?)
-
-## Magento Languages
-
-Refer to Magento official docs: [Help:FAQ:Language](https://www.mediawiki.org/wiki/Manual:FAQ#How_do_I_change_the_interface_language?)
-
-## Magento set MainPage
-
-Refer to Magento official docs: [Help:FAQ:Chage Main Page](https://www.mediawiki.org/wiki/Manual:FAQ#How_do_I_change_which_page_is_the_main_page?)
-
-## Magento using Composer
-
-Websoft9's Magento have installed the Composer by default  
-
-Refer to Magento official docs: [Help:Composer](https://www.mediawiki.org/wiki/Composer/en) 
+Refer to Magento [API official docs](https://devdocs.magento.com/guides/v2.2/get-started/bk-get-started-api.html)

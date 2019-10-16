@@ -4,6 +4,19 @@ We collect the most common troubleshooting of using Magento for your reference:
 
 > Many troubleshooting is closely related to the Server, if you can confirm troubleshooting is related to Cloud Platform, please refer to [Cloud Platform Documentation](https://support.websoft9.com/docs/faq/tech-instance.html)
 
+#### Magento upgrade or install module failed?
+
+![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-upgrade-dependency.png)
+
+If the upgrade have errors, the most likely cause is insufficient memory. On the one hand, you need to ensure that the server memory is not lower than 4G. On the other hand, you need to modify the `.htaccess` file in the Magento root directory.
+
+Make sure `php_value memory_limit` not lower than 2048M
+
+```
+    php_value memory_limit 2048M
+    php_value max_execution_time 18000
+```
+
 #### Database service could not be started?
 
 Insufficient disk space, insufficient memory, and configuration file errors can make database service could not be started  

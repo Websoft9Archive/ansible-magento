@@ -6,7 +6,7 @@
 
 #### Magento 为什么运行这么慢？
 
-Maggento 是一个复杂的企业级电商系统，对计算资源要求较高
+Magento 是一个复杂的企业级电商系统，对计算资源要求较高
 
 #### 为什么要连接 Magento Marketplace？
 

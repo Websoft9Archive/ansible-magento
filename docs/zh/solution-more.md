@@ -38,11 +38,11 @@ Magento 域名绑定操作步骤：
 3. 在 Marketplace 找到您需要的扩展或主题，购买完成，点击【Install】
 4. 登录 Magento 后台，打开：【SYSTEM】>【Web Setup Wizard】>【System Configration】 
 5. 在左侧菜单栏选择【EXTENSION MANAGER】，单击【Refresh】 将购买信息同步到网站，然后通过【Review and Install】查看
-    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-theme-1-websoft9.png)
+    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-theme-1-websoft9.png)
    > Refresh 可能会出现同步失败，请多次刷新
 
 6. 在列表内选择插件或主题，即可进行安装；
-    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-theme-2-websoft9.png)
+    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-theme-2-websoft9.png)
 7. 安装时会进行系统环境检查，条件全面满足才可以开始安装
 8. 安装过程时间较长且报错，请查看[故障原因](/zh/else-troubleshooting.html#magento-在线升级或在线安装插件报错？)
 
@@ -54,7 +54,7 @@ Magento 域名绑定操作步骤：
 需要启用中文请完成如下两个步骤：
 
 1.  如果你希望你的前台是中文，进入到Magento管理员界面，后台 Stores > Configuration > General > Local 中设置Local为Chinese(China)
-    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-setlan-websoft9.png)
+    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-setlan-websoft9.png)
 2.  如果你希望你的账户后台是中文，那么请在管理员页面右上角点击你的账户 Account Setting > Interface Local 中设置 Interface Local 为Chinese（China）
 
 ## Magento Cache
@@ -64,9 +64,9 @@ Cache（缓存）是 Magento 的一项重要设置：
 1. 登录 Magento 后台，依次打开：【System】>【Tools】> 【Cache Management】
 2. 选择需要刷新的缓存
 3. 点击【Flush Magento Cache】和【Flush Cache Storage】开始刷新
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-flushcache-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-flushcache-websoft9.png)
 4. 也可以取消一些页面的缓存设置
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-dscache-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-dscache-websoft9.png)
 
 ## Magento API
 

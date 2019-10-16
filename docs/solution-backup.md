@@ -49,8 +49,21 @@ Manual backup for application is based on the **Exporting source code and databa
 ```
 The general manual backup operation steps are as follows:
 
-1. Compress and download the entire */data/wwwroot/mediawiki* directory by SFTP 
+1. Compress and download the entire */data/wwwroot/magento* directory by SFTP 
 2. Export Magento's database by [phpMyAdmin](/zh/admin-mysql.md)
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/phpmyadmin/phpmyadmin-export-websoft9.png)
 3. Put the source code file, data file and database file in the same folder, named according to the date
 4. Backup completed
+
+### Magento online backup
+
+This section provides Magento online backup solution, please make a necessary snapshot backup in the cloud console in advance.
+
+1. Log in Magento console, open 【System】>【System->Backup】
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-backup-websoft9.png)
+2. Set backup by yourself
+3. Suggest you make the backup to your Schedule
+   - Log in Magento console, open 【Stores】>【Configuration】
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-bkscheduleset-websoft9.png)
+   - go to【System】>【Backup Settings】, set your Schedule
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-bkschedulesets-websoft9.png)

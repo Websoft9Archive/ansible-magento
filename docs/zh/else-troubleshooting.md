@@ -6,7 +6,7 @@
 
 #### Magento 在线升级或在线安装插件报错？
 
-![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-upgrade-dependency.png)
+![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-upgrade-dependency.png)
 
 如果升级过程若报错，最可能的原因是内存不足，一方面需要保证服务器内存不低于 4G，另一方面需要修改 Magento 根目录下的 `.htaccess` 文件。
 
@@ -26,9 +26,9 @@
 #### Magento 出现“One or more indexers are invalid....”如何解决？
 
 1.  在管理员页面的左边控制栏点击“SYSTEM”,在弹出的选项中选择Index Management；
-    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-cron001.png)
+    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-cron001.png)
 2.  点击图中所示的选项框，选择下拉菜单中的Update by Schedule，然后点击序号4所示的选项框选择Select All，最后单击5所示的Submit即可。
-    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-cron002.png)
+    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-cron002.png)
 
 #### Apache httpd 服务无法启动？
 

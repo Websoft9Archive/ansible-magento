@@ -6,8 +6,8 @@ The Magento deployment package contains a sequence software (referred to as "com
 
 ### Magento
 
-Magento installation directory: */data/wwwroot/mediawiki*  
-Magento configuration file: */data/wwwroot/mediawiki/LocalSettings.php*  
+Magento installation directory: */data/wwwroot/magento*  
+Magento configuration file: */data/wwwroot/magento/app/etc/env.php*  
 
 ### PHP
 

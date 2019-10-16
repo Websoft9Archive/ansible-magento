@@ -65,10 +65,10 @@ sidebarDepth: 3
 本节提供Magento在线备份方案，请提前在云控制台做好必备的快照备份。
 
 1. 登录到 Magento 后台，依次打开：【System】>【System->Backup】，进入Magento的备份设置页面
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-backup-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-backup-websoft9.png)
 2. 设置备份
 3. 建议将备份加入到计划任务中
    - 登录 Magento 后台，依次打开：【Stores】>【Configuration】
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-bkscheduleset-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-bkscheduleset-websoft9.png)
    - 找到：【System】>【Backup Settings】，设置计划任务
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-bkschedulesets-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-bkschedulesets-websoft9.png)

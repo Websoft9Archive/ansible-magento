@@ -30,11 +30,11 @@ Magento 可以通过两种方式升级：后台升级界面和 Composer 升级�
 下面介绍后台升级界面升级步骤：
 
 1. 以管理身份登录 Magento，依次打开：【System】>【Web Setup Wizard】>【System Upgrade】 
-   ![Magento upgrade](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-sysupgradestart-websoft9.png)
+   ![Magento upgrade](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-sysupgradestart-websoft9.png)
 2. 如果没有[连接 Marketplace](/zh/stack-installation.html#连接-magento-marketplace)，系统会要求你输入 Access key
-   ![Magento connect Marketplace](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-sysupgradestartkey-websoft9.png)
+   ![Magento connect Marketplace](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-sysupgradestartkey-websoft9.png)
 3. 点击升级按钮，开始在线升级
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-sysupgradestarting-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-sysupgradestarting-websoft9.png)
 4. 升级过程时间较长且报错，请查看[故障原因](/zh/else-troubleshooting.html#magento-在线升级或在线安装插件报错？)
 
-更多更新操作请参考官方文档：[Magento Upgrade](http://devdocs.magento.com/guides/v2.3/comp-mgr/bk-compman-upgrade-guide.html)
+更多更新操作请参考官方文档：[Magento Upgrade](https://devdocs.magento.com/guides/v2.3/comp-mgr/bk-compman-upgrade-guide.html)

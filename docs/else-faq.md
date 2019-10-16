@@ -2,11 +2,19 @@
 
 #### Magento support multi-language?
 
-Yes
+Yes, you should installed your language package first
 
 #### What is the default character set?
 
 UTF-8
+
+#### Why is Magento running so slowly?
+
+Magento is a complex enterprise Ecommerce system with high computing resource requirements
+
+#### Why should I link to the Magento Marketplace?
+
+Just link Magento Marketplace, you can use the resources of Marketplace online. [Link Marketplace](/stack-installation.html#link-magento-marketplace)
 
 #### What the difference between the Magento(LAMP) and Magento(LEMP) ?
 
@@ -19,7 +27,7 @@ You can use the RDS for Magento if you need,and just need to modify the database
 
 #### Where is the database connection configuration of Magento?
 
-Database configuration information in *LocalSettings.php* in the [Magento installation directory](/stack-components.md#mediawiki)
+Database configuration information in *LocalSettings.php* in the [Magento installation directory](/stack-components.md#magento)
 
 #### If there is no domain name, can I deploy Magento?
 
@@ -51,7 +59,7 @@ No, you don't need to change them because LAMP/LNMP was set to changed automatic
 
 #### How to modify the path of Magento?
 
-Example application's path is: */data/wwwroot/mediawiki*, you can modify it by [vhost configuration file](/stack-components.md#apache)
+Example application's path is: */data/wwwroot/magento*, you can modify it by [vhost configuration file](/stack-components.md#apache)
 
 #### How to delete 9Panel?
 

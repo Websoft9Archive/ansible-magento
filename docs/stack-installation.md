@@ -11,48 +11,50 @@ If you have completed the Magento deployment on Cloud Platform, the following st
 ## Magento Installation Wizard
 
 1. Using local Chrome or Firefox to visit the URL *https://domain* or *https://Internet IP*, start to install    
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/mediawiki/mw01.png)
+    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-agree-websoft9.png)
+2. Accept license and environment check passed, then go to next step
+    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-check-websoft9.png)
+3. Database connection configuration, you can use the MySQL in this Server([Don's know password](/stack-accounts.html#mysql)), and you can use other database services
+    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/magento/magento-db-websoft9.png)
+4. Select the language and go to next step
+    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-setlanguage-websoft9.png)
+5. Set the administrator URL
+    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/magento/magento-setbackend-websoft9.png)
+6. Set the administrator account
+    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-setadmin-websoft9.png)
+7. Click the "Install Now" and Waiting for 2-3 minutes
+    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-startinstall-websoft9.png)
+    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-wtinstall-websoft9.png)
+8. OK, it has been installed successfully, the page displays the installed site information. Click "Launch Magento Admin".
+    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-ss-websoft9.png)
+9. Login to backend of Magento  
+    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/magento/mg10.png)
+10. You can see the console of Mangento now
+    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-backend-websoft9.png)
+11. Magento frontpage likes below
+    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-frontend-websoft9.png)
 
-2. Choose a language to continue
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/mediawiki/mw02.png)
+> Refer to [Magento Docs](https://magento.com/resources/technical) to get more details
 
-3. Acccept the license and Continue
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/mediawiki/mw03.png)
+## Link Magento Marketplace
 
-4. Fill in database configuration
-   > It's  easy to make mistakes on this step. If have mistakes, you can [Re-install Magento](/stack-installation.html#can-i-re-install-mediawiki)
+Completed installation of Magento, suggest you make your Magento system link Magento's Marketplace. Once you have linked it, you can use many resourses on Marketplace.
 
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/mediawiki/mediawiki-setdbconnstr-websoft9.png)
+![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-setuptools-websoft9.png)  
 
-   - Database name: mediawiki (MySQL on this Image has a database instance name mediwiki)
-   - Database username: root
-   - Database password: [Don't know password?](/stack-accounts.html#mysql)
-   
-   If you don't want to use the mediawiki as Database name,please create your database first. If you don't want to use the root as Database username,please create your user first
-5. Set database character,Click "Continue";  
-  ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/mediawiki/mw05.png)
+1. [Register a Magento Account](https://account.magento.com/applications/customer/login)
+2. Log in to Magento's Marketplace, create your **Access Key** from My Profile setting
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-smtp-1-websoft9.png)  
+3. Save Access Key
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-savemykey-websoft9.png)  
+4. Log in your Magento backend, open **SYSTEM** > **Web Setup Wizard**
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-websetupwz-websoft9.png) 
+5. Fill in the **System config** with your Access Key from Marketplace
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-setmkkey-websoft9.png) 
+6. Save it, and wait for the Waiting for a successful connection
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-setmkkeyss-websoft9.png) 
+7. Then, you can use the resources of Marketplace online
 
-6. Set the site name, administrator account, password and mail,Click "Continue";
-  ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/mediawiki/mw06.png)
-
-7. Click "Continue";  
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/mediawiki/mw07.png)
-
-8. Click "Continue";  
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/mediawiki/mw08.png)
-
-9. Click "Continue";  
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/mediawiki/mw09.png)
-
-10. Download the file and upload it to the server directory:/data/wwwroot/mediawiki
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/mediawiki/mw10.png)
-
-11. OK, it has been installed successfully.
-
-12. Use http://domain  to go to your index page.
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/mediawiki/mw11.png)
-
-> More useful Magento guide, please refer to [Magento Sysadmin Docs](https://www.mediawiki.org/wiki/Sysadmin_hub/zh)
 
 ## Q&A
 
@@ -67,9 +69,3 @@ MySQL
 #### Can I use Cloud database for Magento?
 
 Yes
-
-#### Can I re-install Magento?
-
-Visit URL *http://Internet IP/mw-config/index.php?page=Restart&lastPage=Install*  to start reinstall
-
-![](http://libs.websoft9.com/Websoft9/DocsPicture/en/mediawiki/Magento-reinstall-websoft9.png)

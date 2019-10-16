@@ -15,29 +15,30 @@ Follow is the sample using **SendGrid's SMTP Service** to configure sending mail
    SMTP username: websoft9smpt
    SMTP password: #fdfwwBJ8f    
    ```
-2. Edit your Magento's configuration file `LocalSettings.php` in the root directory
-3. Search the variable `$wgSMTP`, set the values
+2. Make sure your Magento is [linking Magento's Marketplace](/stack-installation.html#link-magento-marketplace)
+3. Connect Server, use below commands for installing Magento SMTP module
    ```
-    $wgSMTP = array(
-    'host'     => "smtp.163.com", 
-    'IDHost'   => "example.com",      // Email's domain name, optional
-    'port'     => 465,                 
-    'auth'     => true,               
-    'username' => "websoft9@163.com",     
-    'password' => "#wwBJ8"       
-    );
+    cd /data/wwwroot/magento` 
+	composer require mageplaza/module-smtp
+	php bin/magento setup:upgrade 
+	php bin/magento setup:di:compile
    ```
-4. Search the variable `$wgEnableEmail`, set the value
-   ```
-   $ wgEnableEmail = true
-   ```
-5. Search the variablea `$wgEnableEmail`, set it as your email address
-   ```
-   $wgEmergencyContact = "websoft9@163.com";
-   $wgPasswordSender = "websoft9@163.com";
-   ```
-4. Save it
-5. Restart [PHP-FPM Service](/zh/admin-services.html#php-fpm)
-6. Test email sending
+   If you don't want to use command, you can buy it from Marketplace and install it
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-smtpplugin-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-buysmtpplugin-websoft9.png)
+
+4. Log in Magento backend, configure SMTP  
+   - Click **MAGEPLAZA** to start settings
+     ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/magento/magento-smtp-2-websoft9.png)
+
+   - Setting details
+     ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/magento/magento-smtp-3-websoft9.png)
+
+5. Log in Magento backend, set send from and send to Email address
+   - Click **MAGEPLAZA** to start settings
+     ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-smtp-4-websoft9.png)
+   - Set it   
+     ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-smtp-5-websoft9.png)
+     
 
 More SMTP Service(Gmail, Hotmail, QQ mail, Yahoo mail, SendGrid and so on)  settings or Issues with SMTP, please refer to Websoft9's *[SMTP Guide](https://support.websoft9.com/docs/faq/tech-smtp.html)*

@@ -22,18 +22,18 @@ LAMP means that **Apache** for Web Server
    ``` text
    #-----HTTPS template start------------
    <VirtualHost *:443>
-    ServerName  mediawiki.yourdomain.com
-    DocumentRoot "/data/wwwroot/mediawiki"
-    #ErrorLog "logs/mediawiki.yourdomain.com-error_log"
-    #CustomLog "logs/mediawiki.yourdomain.com-access_log" common
-    <Directory "/data/wwwroot/mediawiki">
+    ServerName  magento.yourdomain.com
+    DocumentRoot "/data/wwwroot/magento"
+    #ErrorLog "logs/magento.yourdomain.com-error_log"
+    #CustomLog "logs/magento.yourdomain.com-access_log" common
+    <Directory "/data/wwwroot/magento">
     Options Indexes FollowSymlinks
     AllowOverride All
     Require all granted
     </Directory>
     SSLEngine on
-    SSLCertificateFile  /data/cert/mediawiki.yourdomain.com.crt
-    SSLCertificateKeyFile  /data/cert/mediawiki.yourdomain.com.key
+    SSLCertificateFile  /data/cert/magento.yourdomain.com.crt
+    SSLCertificateKeyFile  /data/cert/magento.yourdomain.com.key
     </VirtualHost>
    #-----HTTPS template end------------
    ```

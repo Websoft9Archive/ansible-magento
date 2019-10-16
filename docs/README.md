@@ -6,19 +6,15 @@ home: false
 
 This documentation is provided by [Websoft9](https://www.websoft9.com/), it can help users to acquire skills of Magento Deployment, Installation, Configuration, HTTPS, SMTP, Backup, Upgrade, Connect Instance and more.
 
-[Magento](https://mediawiki.org) is a free and open-source wiki software package written in PHP. It serves as the platform for Wikipedia and the other Wiki projects, used by hundreds of millions of people each month. Magento is localised in over 350 languages and its reliability and robust feature set have earned it a large and vibrant community of third-party users and developers.
+[Magento](https://magento.org) is a Commerce Platform,it is the most popular commerce platform in the world, with more than 250,000 merchants around the globe selling more and driving innovation. Just check out our customer stories to find out how the Magento Advantage really works.
 
-![](https://libs.websoft9.com/Websoft9/DocsPicture/en/mediawiki/mediawikiui.gif)
+![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magentogui-websoft9.png)
 
 ---
 
-## Demo
-
-Magento official website is the demo *[https://www.mediawiki.org/wiki/Magento](https://www.mediawiki.org/wiki/Magento)*
-
 ## Improve
 
-This document will continue to improve and broadly absorb the needs of users. If you have good idea, please don't hesitate to give us feedback by "Edit this page on GitHub", and welcome you to fork this documentation on [Github](https://github.com/Websoft9/ansible-mediawiki)
+This document will continue to improve and broadly absorb the needs of users. If you have good idea, please don't hesitate to give us feedback by "Edit this page on GitHub", and welcome you to fork this documentation on [Github](https://github.com/Websoft9/ansible-magento)
 
 ## Scope
 

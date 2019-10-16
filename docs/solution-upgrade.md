@@ -26,4 +26,16 @@ apt update && apt upgrade -y
 
 ## Magento Upgrade
 
-More detail please refer to Magento official docs [Magento Upgrading](https://www.mediawiki.org/wiki/Manual:Upgrading)
+Magento provide two methond for Upgrade: Magento backend online upgrade and Composer command upgrade  
+
+Below is the step for upgrade online:
+
+1. Log in to your Magento, go to 【System】>【Web Setup Wizard】>【System Upgrade】 
+   ![Magento upgrade](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-sysupgradestart-websoft9.png)
+2. If your Magento not [Link Marketplace](/stack-installation.html#link-magento-marketplace), you need to fill in your Access key to link Marketplace
+   ![Magento connect Marketplace](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-sysupgradestartkey-websoft9.png)
+3. Click the upgrade button to start upgrading online
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-sysupgradestarting-websoft9.png)
+4. If upgrade is very slowly and have error, please refer to [Troubleshooting](/else-troubleshooting.html#magento-upgrade-or-install-module-failed)
+
+More upgrade detail please refer to [Magento Upgrade](https://devdocs.magento.com/guides/v2.3/comp-mgr/bk-compman-upgrade-guide.html)
