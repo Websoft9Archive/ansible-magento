@@ -61,8 +61,8 @@ Redis logs file: */var/log/redis/redis.log*
 
 | 名称 | 端口号 | 用途 |  必要性 |
 | --- | --- | --- | --- |
-| HTTP | 80 | 通过 HTTP 访问 Odoo | 必须 |
-| HTTPS | 443 | 通过 HTTPS 访问 Odoo | 可选 |
+| HTTP | 80 | 通过 HTTP 访问 Magento | 必须 |
+| HTTPS | 443 | 通过 HTTPS 访问 Magento | 可选 |
 | MySQL | 3306 | 远程连接 MySQL | 可选 |
 
 ## 版本号
