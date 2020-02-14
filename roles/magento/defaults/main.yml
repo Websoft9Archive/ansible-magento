@@ -1,0 +1,13 @@
+#Magento版本，需定期维护
+magento_version: v3.8.1
+
+# magento变量取值范围｛default,Magentoanddemo｝,后者是包含了演示数据的安装
+magento: default
+
+#Web服务器：apache | nginx，通过交互式选择获取
+magento_webs: apache
+
+magento_vhost_dir: /etc/httpd/vhost
+magento_vhost_src: vhost.conf
+magento_service: httpd
+magento_owner: apache
