@@ -25,7 +25,7 @@
     path: /data/wwwroot/www.example.com
     state: absent
 
-- name: mkdir folder name
+- name: mkdir folder
   file: 
     path: /data/wwwroot/magento
     state: directory
@@ -39,7 +39,6 @@
 - name: Download Magento
   shell: |
     composer create-project --repository=https://repo.magento.com/ magento/project-community-edition /data/wwwroot/magento
-    chown -R apache. /data/wwwroot/magento
 
 - name: Delete composer  authentication keys
   file:
@@ -76,7 +75,7 @@
 
 - name: Download language package
   unarchive:
-    src: "{{ mogento_package_CN }}"
+    src: "{{ mogento_package_cn }}"
     dest: /data/wwwroot/magento/vendor/magento/
     remote_src: yes
 

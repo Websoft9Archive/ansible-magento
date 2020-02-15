@@ -2,7 +2,9 @@
 magento_version: v3.8.1
 
 # magento变量取值范围｛default,Magentoanddemo｝,后者是包含了演示数据的安装
-magento: default
+# magento_pack: default
+
+mogento_package_cn: http://libs.websoft9.com/apps/Magento/language-zh_hans_cn.tar.gz
 
 #Web服务器：apache | nginx，通过交互式选择获取
 magento_webs: apache
