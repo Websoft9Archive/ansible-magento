@@ -75,7 +75,7 @@
 
 - name: Download language package
   unarchive:
-    src: "{{ mogento_package_cn }}"
+    src: "{{ magento_package_cn }}"
     dest: /data/wwwroot/magento/vendor/magento/
     remote_src: yes
 

@@ -25,7 +25,7 @@
 
 ## 本项目安装的是magento 最新版吗？
 
-本项目通过下载[Magento源码](https://github.com/magento/magento2.git)进行安装，其中版本号存储在：[role/magento/default/main.yml](/roles/magento/defaults/main.yml)
+本项目通过下载 composer 进行安装，其中版本号存储在：[role/magento/default/main.yml](/roles/magento/defaults/main.yml)
 
 ```
 #magento版本，需定期维护
