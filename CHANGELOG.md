@@ -9,6 +9,7 @@
 
 ### Bug Fixes
 
+* 2020-02-20  修复Magento cron job的用户问题，改为变量```magento_owner```控制
 * 2020-02-14  改写Magento项目
 
 ### Features
