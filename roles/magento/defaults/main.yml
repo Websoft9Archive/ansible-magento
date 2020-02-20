@@ -1,10 +1,9 @@
 #Magento版本，需定期维护，改为 composer 安装后，默认安装的总是最新版本
-magento_version: v3.8.1
+magento_version: v2.3.4
+magento_download_url: https://github.com/magento/magento2.git  # 此变量仅提供GitHub源码仓库地址，方便查询版本号，项目中并未用到
 
 # magento变量取值范围｛default,Magentoanddemo｝,后者是包含了演示数据的安装
 # magento_pack: default
-
-mogento_package_cn: http://libs.websoft9.com/apps/Magento/language-zh_hans_cn.tar.gz
 
 #Web服务器：apache | nginx，通过交互式选择获取
 magento_webs: apache
@@ -13,3 +12,6 @@ magento_vhost_dir: /etc/httpd/vhost
 magento_vhost_src: vhost.conf
 magento_service: httpd
 magento_owner: apache
+magento_name: "magento"
+magento_title: "Magento"
+mogento_package_cn: "http://libs.websoft9.com/apps/Magento/language-zh_hans_cn.tar.gz"
