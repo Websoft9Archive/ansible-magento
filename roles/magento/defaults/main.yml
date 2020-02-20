@@ -1,4 +1,4 @@
-#Magento版本，需定期维护
+#Magento版本，需定期维护，改为 composer 安装后，默认安装的总是最新版本
 magento_version: v3.8.1
 
 # magento变量取值范围｛default,Magentoanddemo｝,后者是包含了演示数据的安装
