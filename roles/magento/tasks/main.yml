@@ -16,15 +16,8 @@
     msg: runtime {{ magento_vhost_dir }}, {{magento_vhost_src}}, {{magento_service}}, {{magento_owner}}, {{magento_webs}}, {{ansible_distribution}}
 
 # Magento
-- name: Remove example dir
-  file:
-    path: /data/wwwroot/www.example.com
-    state: absent
-
-- name: Remove existing folder
-  file: 
-    path: /data/wwwroot/{{magento_name}}
-    state: absent
+- name: Remove extra dir
+  shell: rm -rf /data/wwwroot/*
 
 - name: mkdir app folder
   file: 
@@ -79,9 +72,6 @@
     src: "{{ magento_package_cn }}"
     dest: /data/wwwroot/magento/vendor/magento/
     remote_src: yes
-
-- name: Rename directory name
-  shell: mv /data/wwwroot/* /data/wwwroot/{{magento_name}}
 
 # 系统通用
 - name: Permission directory
