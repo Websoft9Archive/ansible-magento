@@ -8,6 +8,8 @@
     magento_vhost_src: "{{php_runtime_meta[ansible_distribution][magento_webs].vhost_src}}"
     magento_service: "{{php_runtime_meta[ansible_distribution][magento_webs].service}}"
     magento_owner: "{{php_runtime_meta[ansible_distribution][magento_webs].owner}}"
+    magento_name: "magento"
+    magento_title: "Magento"
 
 - debug:
     msg: runtime {{ magento_vhost_dir }}, {{magento_vhost_src}}, {{magento_service}}, {{magento_owner}}, {{magento_webs}}, {{ansible_distribution}}
@@ -25,9 +27,14 @@
     path: /data/wwwroot/www.example.com
     state: absent
 
-- name: mkdir folder
+- name: mkdir existing folder
   file: 
-    path: /data/wwwroot/magento
+    path: /data/wwwroot/{{magento_name}}
+    state: absent
+
+- name: mkdir app folder
+  file: 
+    path: /data/wwwroot/{{magento_name}}
     state: directory
     mode: 0755
 
@@ -45,22 +52,22 @@
     path: /root/.config/composer/auth.json
     state: absent
 
-- name: Add cron job for magento
+- name: Add cron job for magento -1
   cron:
     name: magento
-    user: apache
+    user: "{{magento_owner}}"
     job: "/usr/bin/php /data/wwwroot/magento/bin/magento cron:run | grep -v 'Ran jobs by schedule' >> /data/wwwroot/magento/var/log/magento.cron.log" 
         
-- name: Add cron job for magento
+- name: Add cron job for magento -2
   cron:
     name: magento1
-    user: apache
+    user: "{{magento_owner}}"
     job: "/usr/bin/php /data/wwwroot/magento/update/cron.php >> /data/wwwroot/magento/var/log/update.cron.log"
 
-- name: Add cron job for magento
+- name: Add cron job for magento -3
   cron:
     name: magento2
-    user: apache
+    user: "{{magento_owner}}"
     job: "/usr/bin/php /data/wwwroot/magento/bin/magento setup:cron:run >> /data/wwwroot/magento/var/log/setup.cron.log"
 
 - name: Upload htaccess
