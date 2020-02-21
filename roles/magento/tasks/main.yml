@@ -34,7 +34,7 @@
     composer create-project --repository=https://repo.magento.com/ magento/project-community-edition /data/wwwroot/magento
 
 - name: Rename dir name
-  shell: if [ ! -d "/data/wwwroot/{{magento_name}}" ]; then mv *{{magento_name}}* {{magento_name}}; fi
+  shell: cd /data/wwwroot; if [ ! -d "{{magento_name}}" ]; then mv *{{magento_name}}* {{magento_name}}; fi
 
 - name: Delete composer  authentication keys
   file:
