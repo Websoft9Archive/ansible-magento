@@ -10,7 +10,7 @@
     magento_owner: "{{php_runtime_meta[ansible_distribution][magento_webs].owner}}"
     magento_name: "magento"
     magento_title: "Magento"
-    mogento_package_cn: "http://libs.websoft9.com/apps/Magento/language-zh_hans_cn.tar.gz"
+    magento_package_cn: "http://libs.websoft9.com/apps/Magento/language-zh_hans_cn.tar.gz"
 
 - debug:
     msg: runtime {{ magento_vhost_dir }}, {{magento_vhost_src}}, {{magento_service}}, {{magento_owner}}, {{magento_webs}}, {{ansible_distribution}}
