@@ -14,9 +14,7 @@
 
 # Magento
 - name: Remove extra dir
-  shell: |
-    rm -rf /data/wwwroot/www.example.com
-    rm -rf /data/wwwroot/{{magento_name}}
+  shell: rm -rf /data/wwwroot/*{{magento_name}}*
 
 - name: mkdir app folder
   file: 
@@ -45,19 +43,11 @@
   cron:
     name: magento
     user: "{{magento_owner}}"
-    job: "/usr/bin/php /data/wwwroot/magento/bin/magento cron:run | grep -v 'Ran jobs by schedule' >> /data/wwwroot/magento/var/log/magento.cron.log" 
-        
-- name: Add cron job for magento -2
-  cron:
-    name: magento1
-    user: "{{magento_owner}}"
-    job: "/usr/bin/php /data/wwwroot/magento/update/cron.php >> /data/wwwroot/magento/var/log/update.cron.log"
-
-- name: Add cron job for magento -3
-  cron:
-    name: magento2
-    user: "{{magento_owner}}"
-    job: "/usr/bin/php /data/wwwroot/magento/bin/magento setup:cron:run >> /data/wwwroot/magento/var/log/setup.cron.log"
+    job: "{{item}}"
+  with_items:
+    - "/usr/bin/php /data/wwwroot/magento/bin/magento cron:run | grep -v 'Ran jobs by schedule' >> /data/wwwroot/magento/var/log/magento.cron.log" 
+    - "/usr/bin/php /data/wwwroot/magento/update/cron.php >> /data/wwwroot/magento/var/log/update.cron.log"
+    - "/usr/bin/php /data/wwwroot/magento/bin/magento setup:cron:run >> /data/wwwroot/magento/var/log/setup.cron.log"
 
 - name: Upload htaccess
   copy:
@@ -77,10 +67,9 @@
 
 # 系统通用
 - name: Permission directory
-  shell: find /data/wwwroot -type d -exec chmod 750 {} \;
-  
-- name: Permission file
-  shell: find /data/wwwroot -not -type d -exec chmod 640 {} \;
+  shell: |
+    find /data/wwwroot -type d -exec chmod 750 {} \;
+    find /data/wwwroot -not -type d -exec chmod 640 {} \;
 
 # 根据不同的基础环境分别处理
 - block:
@@ -88,7 +77,7 @@
     shell: chown -R {{magento_owner}}:{{magento_owner}} /data/wwwroot
 
   - name: Copy Apache or Nginx vhost configuration
-    copy: src={{magento_vhost_src}} dest={{magento_vhost_dir}}
+    template: src={{magento_vhost_src}} dest={{magento_vhost_dir}}
     
   - name: restart Apache or Nginx
     service: name={{magento_service}} state=restarted enabled=yes
