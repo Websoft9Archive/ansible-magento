@@ -8,6 +8,7 @@
     magento_vhost_src: "{{php_runtime_meta[ansible_os_family][magento_webs].vhost_src}}"
     magento_service: "{{php_runtime_meta[ansible_os_family][magento_webs].service}}"
     magento_owner: "{{php_runtime_meta[ansible_os_family][magento_webs].owner}}"
+    magento_db_password: "{{mysql_root_password}}"
 
 - debug:
     msg: runtime {{ magento_vhost_dir }}, {{magento_vhost_src}}, {{magento_service}}, {{magento_owner}}, {{magento_webs}}, {{ansible_distribution}}
@@ -39,7 +40,7 @@
     path: /root/.config/composer/auth.json
     state: absent
 
-- name: Add cron job for magento -1
+- name: Add cron job for magento
   cron:
     name: magento
     user: "{{magento_owner}}"
@@ -49,7 +50,7 @@
     - "/usr/bin/php /data/wwwroot/magento/update/cron.php >> /data/wwwroot/magento/var/log/update.cron.log"
     - "/usr/bin/php /data/wwwroot/magento/bin/magento setup:cron:run >> /data/wwwroot/magento/var/log/setup.cron.log"
 
-- name: Upload htaccess
+- name: Upload .htaccess
   copy:
     src: .htaccess
     dest: /data/wwwroot/magento/
@@ -81,3 +82,6 @@
     
   - name: restart Apache or Nginx
     service: name={{magento_service}} state=restarted enabled=yes
+
+  - name: restart php-fpm
+    service: name=php-fpm state=restarted
