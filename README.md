@@ -25,14 +25,11 @@
 
 ## 本项目安装的是magento 最新版吗？
 
-本项目通过下载 composer 进行安装，默认安装的即为最新版本，[role/magento/default/main.yml](/roles/magento/defaults/main.yml) 文件中的下载链接和版本号仅作为最新版本的直观展示，并无实际作用。
+本项目通过下载 composer 进行安装，默认安装的即为最新版本，[role/magento/default/main.yml](/roles/magento/defaults/main.yml) 文件中的下载链接和版本号仅作为最新版本的直观展示，并无实际作用。我们Y也会定期检查并测试官方版本的可用性，以保证用户可以顺利安装最新版。
 
 ```
-#magento版本，需定期更新以作展示
 magento_version: 2.3.4
 ```
-
-我们会定期检查版本，并测试官方版本的可用性，以保证用户可以顺利安装最新版。
 
 ## 安装指南
 
