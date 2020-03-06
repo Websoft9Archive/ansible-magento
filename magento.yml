@@ -53,5 +53,5 @@
     - {role: role_redis, tags: "role_redis"}
     - {role: magento, tags: "magento"}
     - {role: role_init_password, tags: "role_init_password"}
-    - {role: role_preend, tags: "role_preend"}
+    - {role: role_preend, preend_certbot: True, tags: "role_preend"}
     - {role: role_end, tags: "role_end"}
