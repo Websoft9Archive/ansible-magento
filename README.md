@@ -37,7 +37,6 @@ magento_version: 2.3.4
 
 ```
 wget -N https://raw.githubusercontent.com/Websoft9/ansible-linux/master/scripts/install.sh; bash install.sh -r magento
-
 ```
 
 脚本后启动，就开始了自动化安装，必要时需要用户做出交互式选择，然后耐心等待直至安装成功。
