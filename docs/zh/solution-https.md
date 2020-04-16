@@ -40,9 +40,9 @@ Magento(LAMP) 即运行环境采用 **Apache** 作为 Web Server
 4. 修改 ServerName, SSLCertificateFile, SSLCertificateKeyFile等参数的值
 5. 保存， [重启 Apache 服务](/admin-services.md#apache)
 
-### Magento(LEMP)
+### Magento(LNMP)
 
-Magento(LEMP) 即运行环境采用 **Nginx** 作为 Web Server  
+Magento(LMP) 即运行环境采用 **Nginx** 作为 Web Server  
 
 1. 将申请的证书、 证书链文件和秘钥文件上传到 */data/cert* 目录
 2. 打开虚拟主机配置文件：*/etc/nginx/conf.d/default.conf* ，插入**HTTPS 配置段** 到 Magento 的 *server{ }* 中
