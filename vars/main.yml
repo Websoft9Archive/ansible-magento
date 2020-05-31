@@ -19,17 +19,9 @@ mysql_users:
    host: localhost
    priv: '*.*:ALL'
 
-# 初始化MySQL root密码
+# init all users password for MySQL
 init_db: 
-    mysql:
-      user: root
-      password: "123456"  
-  
-# 应用数据库信息
-init_application:
-  magento:
-    service: php-fpm
-    database: magento 
-    database_user: magento
-    database_host: localhost
-    database_password: "123456"
+  mysql:
+    admin: root
+    users: ["magento"]
+    password: "123456"
