@@ -1,18 +1,15 @@
-#全局
 region: "0"
 
-preend_certbot: True
+apache_certbot: True
+common_os_support: ["CentOS","Amazon"]
 
-# MySQL 版本和默认密码
 mysql_version: "5.7"       
 mysql_root_password: "123456"
 phpmyadmin_mysql_password: "123456"
 php_version: "7.2"
 
-# 生成应用数据库和用户
 mysql_databases:
  - name: magento
-   encoding: utf8
  
 mysql_users:
  - name: magento
