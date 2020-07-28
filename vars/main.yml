@@ -1,6 +1,7 @@
 region: "0"
 
 apache_certbot: True
+nginx_certbot: True
 common_os_support: ["CentOS","Amazon"]
 
 mysql_version: "5.7"       
