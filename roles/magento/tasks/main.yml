@@ -34,8 +34,10 @@
     src: .config
     dest: /root/
 
-- name: Download Magento
+- name: Install Magento by composer as the magento user, if you use root, system will appear interaction
   shell: composer create-project --repository=https://repo.magento.com/ magento/project-community-edition /data/wwwroot/magento
+  become: yes
+  become_user: magento
 
 - name: Rename dir name
   shell: cd /data/wwwroot; if [ ! -d "{{magento_name}}" ]; then mv *{{magento_name}}* {{magento_name}}; fi
