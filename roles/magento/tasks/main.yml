@@ -18,7 +18,6 @@
   user:
     name: magento
     shell: /usr/sbin/nologin
-    create_home: no
     
 - name: Remove extra dir
   shell: rm -rf /data/wwwroot/*{{magento_name}}*
