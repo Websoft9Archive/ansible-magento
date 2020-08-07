@@ -29,8 +29,7 @@
     dest: /root/
 
 - name: Download Magento
-  shell: |
-    composer create-project --repository=https://repo.magento.com/ magento/project-community-edition /data/wwwroot/magento
+  shell: composer create-project --repository=https://repo.magento.com/ magento/project-community-edition /data/wwwroot/magento
 
 - name: Rename dir name
   shell: cd /data/wwwroot; if [ ! -d "{{magento_name}}" ]; then mv *{{magento_name}}* {{magento_name}}; fi
