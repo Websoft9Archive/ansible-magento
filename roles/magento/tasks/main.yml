@@ -34,7 +34,9 @@
     dest: /root/
 
 - name: Install Magento by composer as the magento user, if you use root, system will appear interaction
-  shell: sudo composer create-project --repository=https://repo.magento.com/ magento/project-community-edition /data/wwwroot/magento
+  shell: |
+    setfacl -m u:magento:rx /usr/bin/composer
+    composer create-project --repository=https://repo.magento.com/ magento/project-community-edition /data/wwwroot/magento
   become: yes
   become_user: magento
 
