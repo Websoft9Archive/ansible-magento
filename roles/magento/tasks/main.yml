@@ -14,6 +14,12 @@
     msg: runtime {{ magento_vhost_dir }}, {{magento_vhost_src}}, {{magento_service}}, {{magento_owner}}, {{magento_webs}}, {{ansible_distribution}}
 
 # Magento
+- name: Create Magento User
+  user:
+    name: magento
+    shell: /usr/sbin/nologin
+    create_home: no
+    
 - name: Remove extra dir
   shell: rm -rf /data/wwwroot/*{{magento_name}}*
 
@@ -34,7 +40,7 @@
 - name: Rename dir name
   shell: cd /data/wwwroot; if [ ! -d "{{magento_name}}" ]; then mv *{{magento_name}}* {{magento_name}}; fi
 
-- name: Delete composer  authentication keys
+- name: Delete composer authentication keys
   file:
     path: /root/.config/composer/auth.json
     state: absent
