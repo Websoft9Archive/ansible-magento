@@ -17,7 +17,7 @@
 - name: Create Magento User
   user:
     name: magento
-    shell: /usr/sbin/nologin
+    shell: /bin/bash
     
 - name: Remove extra dir
   shell: rm -rf /data/wwwroot/*{{magento_name}}*
