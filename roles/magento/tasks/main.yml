@@ -28,7 +28,7 @@
     state: directory
     mode: 0755
 
-- name: Upload composer  authentication keys
+- name: Upload composer authentication keys
   copy:
     src: .config
     dest: /home/magento
