@@ -46,7 +46,7 @@
 
 - name: Delete composer authentication keys
   file:
-    path: /root/.config/composer/auth.json
+    path: /home/magento/.config/composer/auth.json
     state: absent
 
 - name: Add cron job for magento
