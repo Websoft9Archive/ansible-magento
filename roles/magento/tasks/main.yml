@@ -33,10 +33,10 @@
     src: .config
     dest: /home/magento
 
-- name: set magento_umask
-  shell: echo "022" > /data/wwwroot/magento_umask
-  become: yes
-  become_user: magento
+- name: Setfacl for Magento own /usr/bin/composer
+  shell: |
+    setfacl -m u:magento:rx /usr/bin/composer
+    setfacl -m u:magento:rw -R /data/wwwroot/magento
 
 - name: Install Magento by composer as the magento (must sudo composer) user, if you use root, system will appear interaction
   shell: composer create-project --repository=https://repo.magento.com/ magento/project-community-edition /data/wwwroot/magento
