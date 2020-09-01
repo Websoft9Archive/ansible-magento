@@ -87,9 +87,6 @@
 - block:
   - name: change owner&group
     shell: chown -R {{magento_owner}}:{{magento_owner}} /data/wwwroot
-
-  - name: Copy Apache or Nginx vhost configuration
-    template: src={{magento_vhost_src}} dest={{magento_vhost_dir}}
     
   - name: restart Apache or Nginx
     service: name={{magento_service}} state=restarted enabled=yes
