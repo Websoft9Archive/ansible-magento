@@ -93,3 +93,6 @@
 
   - name: restart php-fpm
     service: name=php-fpm state=restarted
+    
+  - name: restart nginx or apache
+    service: name={{magento_service}} state=restarted
