@@ -85,7 +85,12 @@
   shell: |
     find /data/wwwroot -type d -exec chmod 750 {} \;
     find /data/wwwroot -not -type d -exec chmod 640 {} \;
-
+    
+- name: Upload .htaccess
+  template:
+    src: default.conf
+    dest: /etc/nginx/conf.d/
+    
 # 根据不同的基础环境分别处理
 - block:
   - name: change owner&group
