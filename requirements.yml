@@ -4,7 +4,13 @@
 
 - src: http://github.com/websoft9dev/role_cloud
   version: master
+  
+- src: http://github.com/websoft9dev/role_jdk
+  version: master
 
+- src: http://github.com/websoft9dev/role_elasticsearch
+  version: master
+  
 - src: http://github.com/websoft9dev/role_apache
   version: master
 
