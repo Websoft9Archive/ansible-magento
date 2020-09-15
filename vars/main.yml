@@ -8,7 +8,7 @@ apache_appname: "magento"
 nginx_appname: "magento"
 
 elasticsearch_version: "6.8"
-elasticsearch_clurname: "graylog"
+elasticsearch_clurname: "magento"
 
 mysql_remote: True
 mysql_version: "5.7"       
