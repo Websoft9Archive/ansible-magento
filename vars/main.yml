@@ -16,6 +16,11 @@ mysql_root_password: "123456"
 
 php_version: "7.4"
 
+init_application:
+  magento:
+    username: admin
+    password: "123456"
+    
 docker_applications: 
   - phpmyadmin
 
