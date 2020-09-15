@@ -44,7 +44,7 @@
     dest: /root
 
 - name: Install Magento by composer as the magento (must sudo composer) user, if you use root, system will appear interaction
-  shell: composer create-project --repository=https://repo.magento.com/ magento/project-community-edition=2.3.5 /data/wwwroot/magento -n
+  shell: composer create-project --repository=https://repo.magento.com/ magento/project-community-edition /data/wwwroot/magento -n
 
 - name: Rename dir name
   shell: cd /data/wwwroot; if [ ! -d "{{magento_name}}" ]; then mv *{{magento_name}}* {{magento_name}}; fi
@@ -63,11 +63,6 @@
     - "/usr/bin/php /data/wwwroot/magento/bin/magento cron:run | grep -v 'Ran jobs by schedule' >> /data/wwwroot/magento/var/log/magento.cron.log" 
     - "/usr/bin/php /data/wwwroot/magento/update/cron.php >> /data/wwwroot/magento/var/log/update.cron.log"
     - "/usr/bin/php /data/wwwroot/magento/bin/magento setup:cron:run >> /data/wwwroot/magento/var/log/setup.cron.log"
-
-- name: Upload .htaccess
-  copy:
-    src: .htaccess
-    dest: /data/wwwroot/magento/
 
 - name: Remove default language dir
   file:
