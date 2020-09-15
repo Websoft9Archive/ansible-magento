@@ -21,7 +21,7 @@ init_application:
     username: admin
     password: "123456"
     commands:
-      - sudo cd /data/wwwroot/magento;sudo bin/magento setup:install --base-url=http://localhost/magento --db-host=localhost --db-name=magento --db-user=magento --db-password=$new_password --admin-firstname=admin --admin-lastname=admin --admin-email=help@websoft9.com --admin-user=admin --admin-password=$new_password --language=en_US --currency=USD --timezone=America/Chicago --use-rewrites=1
+      - sudo /data/wwwroot/magento/bin/magento setup:install --base-url=http://localhost/magento --db-host=localhost --db-name=magento --db-user=magento --db-password=$new_password --admin-firstname=admin --admin-lastname=admin --admin-email=help@websoft9.com --admin-user=admin --admin-password=$new_password --language=en_US --currency=USD --timezone=America/Chicago --use-rewrites=1
       
 docker_applications: 
   - phpmyadmin
