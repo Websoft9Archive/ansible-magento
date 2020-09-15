@@ -44,7 +44,7 @@
     dest: /root
 
 - name: Install Magento by composer as the magento (must sudo composer) user, if you use root, system will appear interaction
-  shell: composer create-project --repository=https://repo.magento.com/ magento/project-community-edition /data/wwwroot/magento -n
+  shell: composer create-project --repository=https://repo.magento.com/ magento/project-community-edition=2.3.5 /data/wwwroot/magento -n
 
 - name: Rename dir name
   shell: cd /data/wwwroot; if [ ! -d "{{magento_name}}" ]; then mv *{{magento_name}}* {{magento_name}}; fi
