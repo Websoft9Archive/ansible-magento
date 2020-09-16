@@ -24,11 +24,15 @@
 需要修改配置文件（/data/wwwroot/magento/app/etc/env.php）对应的数据库 password 参数即可。
 
 #### Magento 出现“One or more indexers are invalid....”如何解决？
-
+##### 方法1
 1.  在管理员页面的左边控制栏点击“SYSTEM”,在弹出的选项中选择Index Management；
     ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-cron001.png)
 2.  点击图中所示的选项框，选择下拉菜单中的Update by Schedule，然后点击序号4所示的选项框选择Select All，最后单击5所示的Submit即可。
     ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-cron002.png)
+
+##### 方法2
+1. 使用命令行工具 (SSH or Terminal)进入magento安装根目录：cd /data/wwwroot/magento/bin
+2. 重新编制索引：php bin/magento indexer:reindex
 
 #### Apache httpd 服务无法启动？
 
