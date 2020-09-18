@@ -50,7 +50,7 @@
     - {role: role_docker, tags: "role_docker"}
     - {role: role_php, tags: "role_php"}
     - {role: role_9panel, tags: "role_9panel"}
-    - {role: magento, tags: "magento"}
+ #   - {role: magento, tags: "magento"}
     - {role: role_inotify_watch, tags: "role_inotify_watch"}
     - {role: role_init, tags: "role_init"}
     - {role: role_preend, tags: "role_preend"}
