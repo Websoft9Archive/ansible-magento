@@ -2,10 +2,14 @@ region: "0"
 
 common_os_support: ["CentOS","Amazon"]
 
+
 apache_certbot: True
-nginx_certbot: True
 apache_appname: "magento"
+apache_vhost_mode: "www"
+
+nginx_certbot: True
 nginx_appname: "magento"
+nginx_vhost_mode: "www"
 
 elasticsearch_version: "6.8"
 elasticsearch_clurname: "magento"
@@ -32,7 +36,6 @@ mysql_databases:
  
 mysql_users:
  - name: magento
-   host: localhost
    priv: '*.*:ALL'
 
 # init all users password for MySQL
