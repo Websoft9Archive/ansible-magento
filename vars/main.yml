@@ -11,7 +11,7 @@ nginx_certbot: True
 nginx_appname: "magento"
 nginx_vhost_mode: "www"
 
-elasticsearch_version: "6.8"
+elasticsearch_version: "7.8"
 elasticsearch_clurname: "magento"
 
 mysql_remote: True
