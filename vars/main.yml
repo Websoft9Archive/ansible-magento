@@ -19,7 +19,10 @@ mysql_version: "8.0"
 mysql_root_password: "123456"
 
 php_version: "7.4"
-
+php_configuration_default:
+  - name: memory_limit
+    value: "-1"
+    
 init_application:
   magento:
     username: admin
