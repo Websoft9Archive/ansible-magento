@@ -101,6 +101,9 @@
   - name: change permision by ubuntu
     shell: chown -R :www-data .
     when: ansible_os_family == "Debian"
+   
+  - name: Init install magento
+    shell: sudo /data/wwwroot/magento/bin/magento setup:install --base-url=http://$(curl ifconfig.me) --backend-frontname=admin --db-host=localhost --db-name=magento --db-user=magento --db-password=123456 --admin-firstname=admin --admin-lastname=admin --admin-email=help@websoft9.com --admin-user=admin --admin-password=admin123456 --language=en_US --currency=USD --timezone=America/Chicago --use-rewrites=1
     
   - name: restart php-fpm
     service: name=php-fpm state=restarted
