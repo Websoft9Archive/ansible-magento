@@ -37,7 +37,6 @@
   shell: |
     setfacl -m u:magento:rx /usr/bin/composer
     setfacl -m u:magento:rw -R /data/wwwroot/magento
-
 - name: Upload composer authentication keys to root
   copy:
     src: .config
@@ -91,27 +90,15 @@
   - name: change owner&group
     shell: chown -R {{magento_owner}}:{{magento_owner}} /data/wwwroot
 
-#  - name: change permision
-#    shell: |
-#      cd /data/wwwroot/magento
-#      find var generated vendor pub/static pub/media app/etc -type f -exec chmod g+w {} +
-#      find var generated vendor pub/static pub/media app/etc -type d -exec chmod g+ws {} +
-#      chmod u+x bin/magento
-      
-#  - name: change permision by ubuntu
-#    shell: chown -R :www-data .
-#    when: ansible_os_family == "Debian"
-   
-#  - name: Init install magento
-#    shell: sudo /data/wwwroot/magento/bin/magento setup:install --base-url=http://$(curl ifconfig.me) --backend-frontname=admin --db-host=localhost --db-name=magento --db-user=magento --db-password=123456 --admin-firstname=admin --admin-lastname=admin --admin-email=help@websoft9.com --admin-user=admin --admin-password=admin123456 --language=en_US --currency=USD --timezone=America/Chicago --use-rewrites=1
+  - name: change permision
+    shell: |
+      cd /data/wwwroot/magento
+      find var generated vendor pub/static pub/media app/etc -type f -exec chmod g+w {} +
+      find var generated vendor pub/static pub/media app/etc -type d -exec chmod g+ws {} +
+      chmod u+x bin/magento
     
   - name: restart php-fpm
     service: name=php-fpm state=restarted
     
   - name: restart nginx or apache
     service: name={{magento_service}} state=restarted
-
-  - name: close TwoFactorAuth
-    shell: php bin/magento module:disable Magento_TwoFactorAuth
-    args:
-      chdir: /data/wwwroot/magento    
