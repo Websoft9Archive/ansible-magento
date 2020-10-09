@@ -97,9 +97,18 @@
       find var generated vendor pub/static pub/media app/etc -type f -exec chmod g+w {} +
       find var generated vendor pub/static pub/media app/etc -type d -exec chmod g+ws {} +
       chmod u+x bin/magento
+      
+  - name: change permision by ubuntu
+    shell: chown -R :www-data .
+    when: ansible_os_family == "Debian"
     
   - name: restart php-fpm
     service: name=php-fpm state=restarted
     
   - name: restart nginx or apache
     service: name={{magento_service}} state=restarted
+
+  - name: close TwoFactorAuth
+    shell: php bin/magento module:disable Magento_TwoFactorAuth
+    args:
+      chdir: /data/wwwroot/magento    
