@@ -29,7 +29,7 @@ init_application:
     password: "123456"
     commands:
       - ip=`curl ifconfig.me`
-      - sudo /data/wwwroot/magento/bin/magento setup:install --base-url=http://$ip --db-host=localhost --db-name=magento --db-user=magento --db-password=$new_password --admin-firstname=admin --admin-lastname=admin --admin-email=help@websoft9.com --admin-user=admin --admin-password=$new_password --language=en_US --currency=USD --timezone=America/Chicago --use-rewrites=1
+      - sudo /data/wwwroot/magento/bin/magento setup:install --base-url=http://$ip --backend-frontname=admin --db-host=localhost --db-name=magento --db-user=magento --db-password=123456 --admin-firstname=admin --admin-lastname=admin --admin-email=help@websoft9.com --admin-user=admin --admin-password=Qiaofeng1227 --language=en_US --currency=USD --timezone=America/Chicago --use-rewrites=1
     
 docker_applications: 
   - phpmyadmin
