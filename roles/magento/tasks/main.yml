@@ -84,6 +84,10 @@
   template:
     src: default.conf
     dest: /etc/nginx/conf.d/
+   
+- name: Ubuntu php sock edit
+  shell: sudo sed -i "s/php-fpm.sock/php\/php-fpm.sock/g" /etc/nginx/conf.d/default.conf
+  when: ansible_os_family == "Debian"
     
 # 根据不同的基础环境分别处理
 - block:
