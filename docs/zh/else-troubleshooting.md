@@ -38,6 +38,15 @@
 
 请通过分析日志文件定位原因： */var/log/httpd*
 
+#### 登陆时需要邮件验证，无法收到邮件怎么办？
+
+关闭密码邮件双重认证，通过密码即可登陆
+```shell
+# Close Magento_TwoFactorAuth
+sudo php /data/wwwroot/magento/bin/magento module:disable Magento_TwoFactorAuth
+```
+
+
 #### 网站重定向错误？
 
 分析网站根目录下的 `.htaccess` 文件，看看有没有死循环规则
