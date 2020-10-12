@@ -32,7 +32,7 @@
 
 ##### 方法2
 1. 使用命令行工具 (SSH or Terminal)进入magento安装根目录：cd /data/wwwroot/magento/bin
-2. 重新编制索引：php bin/magento indexer:reindex
+2. 重新编制索引：php magento indexer:reindex
 
 #### Apache httpd 服务无法启动？
 
