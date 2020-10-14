@@ -30,6 +30,10 @@
     ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-login-websoft9.png)
 10. 登陆成功，体验后台
     ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-backend-websoft9.png)
+11. 如果安装的是2.4.0或更新的版本,不需要进行引导安装，输入*http://域名* 或 *http://Internet IP*, 就进入商店首页
+    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-init-websoft9.png)
+12. 如果安装的是2.4.0或更新的版本，后台管理的登陆地址是*http://域名/admin* 或 *http://Internet IP/admin*,登录后操作和其他版本一样
+    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-login-websoft9.png)
 
 > 需要了解更多Magento的使用，请参考官方文档：[Magento Docs](https://magento.com/resources/technical)
 
