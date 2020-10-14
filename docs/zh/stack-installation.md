@@ -10,9 +10,9 @@
 
 ## Magento 安装向导
 
-1. 如果安装的是2.4.0或更新的版本,不需要进行引导安装，浏览器输入*http://域名* 或 *http://Internet IP*, 就进入商店首页
+1. 如果安装的是2.4.0或最新的版本,不需要进行引导安装，浏览器输入*http://域名* 或 *http://Internet IP*, 就进入商店首页
     ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-init-websoft9.png)
-2. 如果安装的是2.4.0或更新的版本，浏览器输入*http://域名/admin* 或 *http://Internet IP/admin*,登陆成功体验后台 
+2. 如果安装的是2.4.0或最新的版本，浏览器输入*http://域名/admin* 或 *http://Internet IP/admin*,登陆成功体验后台 
    管理员账号：*`root`* 管理员密码：存储在您的服务器指定文件中（ */credentials/password.txt* ）  
     ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-login-websoft9.png)
 3. 如果安装的是2.3.5或更早的版本，需要根据向导来安装，请参照向导3~12。  
@@ -39,7 +39,7 @@
 
 > 需要了解更多Magento的使用，请参考官方文档：[Magento Docs](https://magento.com/resources/technical)
 
-## 连接 Magento Marketplace
+<!-- ## 连接 Magento Marketplace
 
 安装 Magento 后，建议把你安装的 Magento 系统与 Magento 官方的 Marketplace 资源进行在线连接，这样便可以使用 Marketplace 上的大量资源
 
@@ -56,7 +56,7 @@
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-setmkkey-websoft9.png) 
 6. 成功保存，连接成功
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-setmkkeyss-websoft9.png) 
-7. 连接后，就可以很方便的使用 Marketplace 上的资源
+7. 连接后，就可以很方便的使用 Marketplace 上的资源 -->
 
 
 ## 常见问题
