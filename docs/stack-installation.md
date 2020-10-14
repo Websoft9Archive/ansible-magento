@@ -36,7 +36,7 @@ If you have completed the Magento deployment on Cloud Platform, the following st
 
 > Refer to [Magento Docs](https://magento.com/resources/technical) to get more details
 
-## Link Magento Marketplace
+<!-- ## Link Magento Marketplace
 
 Completed installation of Magento, suggest you make your Magento system link Magento's Marketplace. Once you have linked it, you can use many resourses on Marketplace.
 
@@ -53,7 +53,7 @@ Completed installation of Magento, suggest you make your Magento system link Mag
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-setmkkey-websoft9.png) 
 6. Save it, and wait for the Waiting for a successful connection
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-setmkkeyss-websoft9.png) 
-7. Then, you can use the resources of Marketplace online
+7. Then, you can use the resources of Marketplace online -->
 
 
 ## Q&A

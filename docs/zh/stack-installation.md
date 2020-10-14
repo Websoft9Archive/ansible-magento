@@ -10,30 +10,32 @@
 
 ## Magento 安装向导
 
-1. 使用本地电脑的 Chrome 或 Firefox 浏览器访问网址：*http://域名* 或 *http://Internet IP*, 就进入引导首页
-    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-agree-websoft9.png)
-2. 接受许可协议，环境检测通过，进入下一步
-    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-check-websoft9.png)
-3. 系统进入配置数据库界面，可以使用本部署包自带的 MySQL（[不知道数据库密码？](/zh/stack-accounts.html#mysql)），也可以使用其他数据库源
-    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-db-websoft9.png)
-4. 设置语言、时区等信息
-    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-setlanguage-websoft9.png)
-5. 设置店铺的访问域名和后台地址（后台地址设置后一定要记住）
-    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-setbackend-websoft9.png)
-6. 设置管理账号和密码，牢记之
-    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-setadmin-websoft9.png)
-7. 系统进入待安装过程，点击“Install Now”，耐心等待
-    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-startinstall-websoft9.png)
-8. 安装成功后，系统会有如下提示
-    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-ss-websoft9.png)
-9. 点击“Launch Magento Admin”，登陆后台
-    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-login-websoft9.png)
-10. 登陆成功，体验后台
-    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-backend-websoft9.png)
-11. 如果安装的是2.4.0或更新的版本,不需要进行引导安装，输入*http://域名* 或 *http://Internet IP*, 就进入商店首页
+1. 如果安装的是2.4.0或更新的版本,不需要进行引导安装，浏览器输入*http://域名* 或 *http://Internet IP*, 就进入商店首页
     ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-init-websoft9.png)
-12. 如果安装的是2.4.0或更新的版本，后台管理的登陆地址是*http://域名/admin* 或 *http://Internet IP/admin*,登录后操作和其他版本一样
+2. 如果安装的是2.4.0或更新的版本，浏览器输入*http://域名/admin* 或 *http://Internet IP/admin*,登陆成功体验后台 
+   管理员账号：*`root`* 管理员密码：存储在您的服务器指定文件中（ */credentials/password.txt* ）  
     ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-login-websoft9.png)
+3. 如果安装的是2.3.5或更早的版本，需要根据向导来安装，请参照向导3~12。  
+   使用本地电脑的 Chrome 或 Firefox 浏览器访问网址：*http://域名* 或 *http://Internet IP*, 就进入引导首页
+    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-agree-websoft9.png)
+4. 接受许可协议，环境检测通过，进入下一步
+    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-check-websoft9.png)
+5. 系统进入配置数据库界面，可以使用本部署包自带的 MySQL（[不知道数据库密码？](/zh/stack-accounts.html#mysql)），也可以使用其他数据库源
+    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-db-websoft9.png)
+6. 设置语言、时区等信息
+    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-setlanguage-websoft9.png)
+7. 设置店铺的访问域名和后台地址（后台地址设置后一定要记住）
+    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-setbackend-websoft9.png)
+8. 设置管理账号和密码，牢记之
+    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-setadmin-websoft9.png)
+9. 系统进入待安装过程，点击“Install Now”，耐心等待
+    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-startinstall-websoft9.png)
+10. 安装成功后，系统会有如下提示
+    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-ss-websoft9.png)
+11. 点击“Launch Magento Admin”，登陆后台
+    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-login-websoft9.png)
+12. 登陆成功，体验后台
+    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-backend-websoft9.png)
 
 > 需要了解更多Magento的使用，请参考官方文档：[Magento Docs](https://magento.com/resources/technical)
 
