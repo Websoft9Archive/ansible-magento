@@ -54,6 +54,12 @@ Please make sure that your brandwith of Server is more than 5M
 #### Apache httpd service restart error
 Please make sure the vhost.conf is correct for you, and you can track and analyze log files from */var/log/httpd*
 
+#### Login error,need mail authentication？
+Close Magento_TwoFactorAuth，login by password
+```shell
+# Close Magento_TwoFactorAuth
+sudo php /data/wwwroot/magento/bin/magento module:disable Magento_TwoFactorAuth
+```
 
 #### Redirects Error
 Check your `.htaccess` file in your application root directory, make sure there not any cycle redirects settings

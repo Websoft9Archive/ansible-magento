@@ -19,9 +19,9 @@ Magento 是一个复杂的企业级电商系统，对计算资源要求较高
 sudo /data/wwwroot/magento/bin/magento setup:config:set --backend-frontname=[yourAdminUrl] -n
 ```
 
-#### 为什么要连接 Magento Marketplace？
+<!-- #### 为什么要连接 Magento Marketplace？
 
-只有连接Magento Marketplace，才可以使用其资源。连接教程[参考](/zh/stack-installation.html#连接-magento-marketplace)
+只有连接Magento Marketplace，才可以使用其资源。连接教程[参考](/zh/stack-installation.html#连接-magento-marketplace) -->
 
 #### Magento(LAMP)，Magento(LNMP)等商品括号中的 LAMP,LNMP 是什么意思？
 

@@ -12,9 +12,18 @@ UTF-8
 
 Magento is a complex enterprise Ecommerce system with high computing resource requirements
 
-#### Why should I link to the Magento Marketplace?
+#### Forget backend URL of Magento？
+```shell
+# Show Magento(URL)
+/data/wwwroot/magento/bin/magento info:adminuri
 
-Just link Magento Marketplace, you can use the resources of Marketplace online. [Link Marketplace](/stack-installation.html#link-magento-marketplace)
+# Update Magento(URL)
+sudo /data/wwwroot/magento/bin/magento setup:config:set --backend-frontname=[yourAdminUrl] -n
+```
+
+<!-- #### Why should I link to the Magento Marketplace?
+
+Just link Magento Marketplace, you can use the resources of Marketplace online. [Link Marketplace](/stack-installation.html#link-magento-marketplace) -->
 
 #### What the difference between the Magento(LAMP) and Magento(LEMP) ?
 
