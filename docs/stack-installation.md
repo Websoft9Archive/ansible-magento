@@ -11,7 +11,7 @@ If you have completed the Magento deployment on Cloud Platform, the following st
 ## Magento Installation Wizard
 
 1. If you are installing 2.4.0 or the latest version,no initial setup is required,visit the URL *https://domain* or *https://Internet IP*,Magento frontpage likes below
-    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/magento/magento-agree-websoft9.png)
+    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/magento/magento-init-websoft9.png)
 2. If you are installing 2.4.0 or the latest version,visit the URL *https://domain/admin* or *https://Internet IP/admin*,login to backend of Magento  
    Administrator username: root,Administrator password: stored in the file of your server instance: /credentials/password.txt.
     ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-check-websoft9.png)
