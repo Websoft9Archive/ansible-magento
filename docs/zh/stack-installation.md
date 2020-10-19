@@ -39,7 +39,7 @@
 
 > 需要了解更多Magento的使用，请参考官方文档：[Magento Docs](https://magento.com/resources/technical)
 
-<!-- ## 连接 Magento Marketplace
+## 连接 Magento Marketplace
 
 安装 Magento 后，建议把你安装的 Magento 系统与 Magento 官方的 Marketplace 资源进行在线连接，这样便可以使用 Marketplace 上的大量资源
 
@@ -56,7 +56,7 @@
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-setmkkey-websoft9.png) 
 6. 成功保存，连接成功
    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-setmkkeyss-websoft9.png) 
-7. 连接后，就可以很方便的使用 Marketplace 上的资源 -->
+7. 连接后，就可以很方便的使用 Marketplace 上的资源
 
 
 ## 常见问题
