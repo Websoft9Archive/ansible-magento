@@ -20,7 +20,7 @@ mysql_root_password: "123456"
 
 php_getcomposer_url: "https://getcomposer.org/composer-2.phar"
 php_version: "7.4"
-php_configuration_default:
+php_configuration_extras:
   - name: memory_limit
     value: "-1"
     
