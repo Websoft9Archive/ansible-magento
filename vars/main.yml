@@ -11,12 +11,16 @@ nginx_certbot: True
 nginx_appname: "magento"
 nginx_vhost_mode: "www"
 
-elasticsearch_version: "7.8"
+elasticsearch_version: "7.9"
 elasticsearch_clurname: "magento"
 
 mysql_remote: True
 mysql_version: "8.0"       
 mysql_root_password: "123456"
+
+redis_version: "6.0"
+
+varnish_version: "6.4"
 
 php_getcomposer_url: "https://getcomposer.org/composer-2.phar"
 php_version: "7.4"
