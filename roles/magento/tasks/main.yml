@@ -88,7 +88,15 @@
 - name: Ubuntu php sock edit
   shell: sudo sed -i "s/php-fpm.sock/php\/php-fpm.sock/g" /etc/nginx/conf.d/default.conf
   when: ansible_os_family == "Debian"
-    
+
+- name: Create link for magento cli
+  file:
+    src: '{{item.src}}'
+    dest: '{{item.dest}}'
+    state: link
+  with_items:
+    - {src: /data/wwwroot/magento/bin/magento ,dest: /usr/bin/magento}  
+
 # 根据不同的基础环境分别处理
 - block:
   - name: change owner&group
