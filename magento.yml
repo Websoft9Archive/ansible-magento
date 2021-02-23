@@ -14,7 +14,7 @@
       default: 1
 
     - name: 'data_installation'
-      prompt: "\nDo you want to install sample data with magento?\n\n? [ 1/2 ] \n\n
+      prompt: "\nDo you want to install sample data with magento? [ 1/2 ] \n\n
       1: yes,install it)\n
       2: no)\n"
       private: no
