@@ -13,19 +13,30 @@
       private: no
       default: 1
 
-  vars:
+    - name: 'data_installation'
+      prompt: "\nDo you want to install sample data with magento?\n\n? [ 1/2 ] \n\n
+      1: yes,install it)\n
+      2: no)\n"
+      private: no
+      default: 1
 
+  vars:
     webs_select:
       '1': 'apache'
       '2': 'nginx'
-
     infrastructure_select:
       '1': 'LAMP'
       '2': 'LNMP'
+    data_installation:
+      '1': True
+      'y': True
+      '2': False
+      'n': False
 
     runtime_name: "{{infrastructure_select[webs_selection] | lower}}" 
     magento_webs: "{{webs_select[webs_selection]}}" 
     w9panel_webs: "{{webs_select[webs_selection]}}" 
+    sample_data_installation: "{{data_installation[data_installation]}}"
 
     w9panel_set_infrastructure: "{{infrastructure_select[webs_selection]}}" 
     w9panel_set_apps: 
