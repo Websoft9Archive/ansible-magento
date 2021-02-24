@@ -44,3 +44,18 @@ sudo systemctl stop redis
 sudo systemctl restart redis
 sudo systemctl status redis
 ```
+
+### Varnish
+
+```shell
+sudo systemctl start varnish
+sudo systemctl stop varnish
+sudo systemctl restart varnish
+sudo systemctl status varnish
+```
+
+### RabbitMQ
+sudo systemctl start rabbitmq-server
+sudo systemctl stop rabbitmq-server
+sudo systemctl restart rabbitmq-server
+sudo systemctl status rabbitmq-server
