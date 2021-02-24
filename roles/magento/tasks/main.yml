@@ -97,21 +97,6 @@
   with_items:
     - {src: /data/wwwroot/magento/bin/magento ,dest: /usr/bin/magento} 
 
-- block:
-  - name: Install magento sample data
-    expect:
-      command: magento sampledata:deploy -n
-      responses:
-        "Username:": "{{magento_Username}}"
-        "Password:": "{{magento_Password}}" 
-
-  - name: Update the magento database and schema
-    shell: |
-      magento module:enable --all
-      php -dmemory_limit=-1 bin/magento setup:di:compile
-      magento setup:upgrade -n
-  when: sample_data_installation 
-
 # 根据不同的基础环境分别处理
 - block:
   - name: change owner&group
@@ -123,7 +108,23 @@
       find var generated vendor pub/static pub/media app/etc -type f -exec chmod g+w {} +
       find var generated vendor pub/static pub/media app/etc -type d -exec chmod g+ws {} +
       chmod u+x bin/magento
-    
+
+- block:
+  - name: Install magento sample data
+    expect:
+      command: magento sampledata:deploy -n
+      responses:
+        "Username:": "{{magento_Username}}"
+        "Password:": "{{magento_Password}}"
+        "credentials": "y" 
+
+  - name: Update the magento database and schema
+    shell: |
+      magento module:enable --all
+      php -dmemory_limit=-1 bin/magento setup:di:compile
+      magento setup:upgrade -n
+  when: sample_data_installation 
+
   - name: restart php-fpm
     service: name=php-fpm state=restarted
     
