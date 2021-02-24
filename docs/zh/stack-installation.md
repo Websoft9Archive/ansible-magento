@@ -14,7 +14,7 @@
     ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-mall-websoft9.png)
 2. 使用浏览器访问网址：*http://域名/admin* 或 *http://Internet IP/admin*，进入后台登陆页面  
     ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-login-websoft9.png)
-3. 输入用户名和密码[（不知道密码？）](/zh/stack-accounts.md)，登录到 AWX 后台管理界面  
+3. 输入用户名和密码[（不知道密码？）](/zh/stack-accounts.md)，登录到 Magento 后台管理界面  
     ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-backend-websoft9.png)
 
 > 需要了解更多Magento的使用，请参考官方文档：[Magento Docs](https://magento.com/resources/technical)
