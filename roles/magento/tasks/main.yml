@@ -26,10 +26,10 @@
   file: 
     path: /data/wwwroot/{{magento_name}}
     state: directory
-    mode: 0755
+    mode: 0750
 
 - name: Upload composer authentication keys
-  copy:
+  template:
     src: .config
     dest: /home/magento
 
@@ -37,21 +37,48 @@
   shell: |
     setfacl -m u:magento:rx /usr/bin/composer
     setfacl -m u:magento:rw -R /data/wwwroot/magento
+
 - name: Upload composer authentication keys to root
-  copy:
+  template:
     src: .config
     dest: /root
 
-- name: Install Magento by composer as the magento (must sudo composer) user, if you use root, system will appear interaction
+- name: Create Magento site by composer, -n for interaction
   shell: composer create-project --repository=https://repo.magento.com/ magento/project-community-edition /data/wwwroot/magento -n
 
 - name: Rename dir name
   shell: cd /data/wwwroot; if [ ! -d "{{magento_name}}" ]; then mv *{{magento_name}}* {{magento_name}}; fi
 
-- name: Delete composer authentication keys
-  file:
-    path: /home/magento/.config/composer/auth.json
-    state: absent
+- name: Set pub/static pub/media app/etc permission
+  shell: |
+    cd /data/wwwroot/magento
+    find var generated vendor pub/static pub/media app/etc -type f -exec chmod g+w {} +
+    find var generated vendor pub/static pub/media app/etc -type d -exec chmod g+ws {} +
+    chmod u+x bin/magento
+    chown -R {{magento_owner}}:{{magento_owner}} /data/wwwroot
+
+- block:
+  - name: Install magento sample data
+    expect:
+      command: /data/wwwroot/magento/bin/magento sampledata:deploy -n
+      responses:
+        "Username:": "{{magento_repo_username}}"
+        "Password:": "{{magento_repo_password}}"
+        "credentials": "y" 
+  when: magento_install_sample
+
+- name: Install magento by magento setup cli
+  shell: |
+    internet_ip=`curl ifconfig.me`
+    ./magento setup:install --base-url=http://$internet_ip \
+    --db-host=localhost --db-name=magento --db-user=magento --db-password={{magento_db_password}} \ --admin-firstname=xu --admin-lastname=way --admin-email=help@websoft9.com --admin-user={{magento_admin_username}} --admin-password={{magento_admin_password}} \
+    --language=en_US --currency=USD --timezone=America/Chicago --use-rewrites=1 \
+    --search-engine=elasticsearch7 --elasticsearch-host=127.0.0.1 --elasticsearch-port={{magento_elasticsearch_port}}
+    ./magento setup:config:set --backend-frontname=admin -n
+    php /data/wwwroot/magento/bin/magento module:disable Magento_TwoFactorAuth
+    ./magento indexer:reindex
+  args:
+    chdir: /data/wwwroot/magento/bin
 
 - name: Add cron job for magento
   cron:
@@ -89,47 +116,13 @@
   shell: sudo sed -i "s/php-fpm.sock/php\/php-fpm.sock/g" /etc/nginx/conf.d/default.conf
   when: ansible_os_family == "Debian"
 
-- name: Create link for magento cli
-  file:
-    src: '{{item.src}}'
-    dest: '{{item.dest}}'
-    state: link
-  with_items:
-    - {src: /data/wwwroot/magento/bin/magento ,dest: /usr/bin/magento} 
-
 # 根据不同的基础环境分别处理
 - block:
-  - name: change owner&group
-    shell: chown -R {{magento_owner}}:{{magento_owner}} /data/wwwroot
-
-  - name: change permision
-    shell: |
-      cd /data/wwwroot/magento
-      find var generated vendor pub/static pub/media app/etc -type f -exec chmod g+w {} +
-      find var generated vendor pub/static pub/media app/etc -type d -exec chmod g+ws {} +
-      chmod u+x bin/magento
-
-- block:
-  - name: Install magento sample data
-    expect:
-      command: magento sampledata:deploy -n
-      responses:
-        "Username:": "{{magento_Username}}"
-        "Password:": "{{magento_Password}}"
-        "credentials": "y" 
-
-  - name: Update the magento database and schema
-    shell: |
-      magento module:enable --all
-      php -dmemory_limit=-1 bin/magento setup:di:compile
-      magento setup:upgrade -n
-  when: sample_data_installation 
-
-- name: restart php-fpm
-  service: name=php-fpm state=restarted
-  
-- name: restart nginx or apache
-  service: name={{magento_service}} state=restarted
+  - name: restart php-fpm
+    service: name=php-fpm state=restarted
+    
+  - name: restart nginx or apache
+    service: name={{magento_service}} state=restarted
 
 # Check version,
 - block:

@@ -2,7 +2,6 @@ region: "0"
 
 common_os_support: ["CentOS","Amazon","Ubuntu"]
 
-
 apache_certbot: True
 apache_appname: "magento"
 apache_vhost_mode: "www"
@@ -22,23 +21,11 @@ redis_version: "6.0"
 
 varnish_version: "6.4"
 
-php_getcomposer_url: "https://getcomposer.org/composer-2.phar"
 php_version: "7.4"
 php_configuration_extras:
   - name: memory_limit
     value: "-1"
-    
-init_application:
-  magento:
-    username: admin
-    password: "123456"
-    commands:
-      - ip=`curl ifconfig.me`
-      - sudo /data/wwwroot/magento/bin/magento setup:install --base-url=http://$ip --db-host=localhost --db-name=magento --db-user=magento --db-password=$new_password --admin-firstname=admin --admin-lastname=admin --admin-email=help@websoft9.com --admin-user=admin --admin-password=$new_password --language=en_US --currency=USD --timezone=America/Chicago --use-rewrites=1 --search-engine=elasticsearch7 --elasticsearch-host=$ip --elasticsearch-port=9200
-      - sudo /data/wwwroot/magento/bin/magento setup:config:set --backend-frontname=admin -n
-      - sudo php /data/wwwroot/magento/bin/magento module:disable Magento_TwoFactorAuth
-      - sudo /data/wwwroot/magento/bin/magento indexer:reindex
-    
+  
 docker_applications: 
   - phpmyadmin
 
@@ -55,3 +42,15 @@ init_db:
     admin: root
     users: ["magento"]
     password: "123456"
+    config_paths:
+      - /data/wwwroot/magento/app/etc/env.php
+
+init_application:
+  magento:
+    username: admin
+    password: "admin123"
+    commands:
+      - internet_ip=`curl ifconfig.me`
+      - /data/wwwroot/magento/bin/magento setup:store-config:set --base-url=http://$internet_ip
+      - /data/wwwroot/magento/bin/magento admin:user:create --admin-firstname=admin --admin-lastname=admin --admin-email=help@websoft9.com --admin-user=admin --admin-password=$newpassword
+      - php /data/wwwroot/magento/bin/magento cache:flush

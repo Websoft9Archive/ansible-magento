@@ -1,11 +1,14 @@
 #Magento版本，需定期维护，改为 composer 安装后，默认安装的总是最新版本
 magento_version: v2.4.0
-magento_download_url: https://github.com/magento/magento2.git  # 此变量仅提供GitHub源码仓库地址，方便查询版本号，项目中并未用到
-magento_Username: "7ccb1b382a5b5900b7dbf294341c01c3"
-magento_Password: "891e010132a43c222bca841a651a765c"
 
-# magento变量取值范围｛default,Magentoanddemo｝,后者是包含了演示数据的安装
-# magento_pack: default
+magento_repo_username: "7ccb1b382a5b5900b7dbf294341c01c3"
+magento_repo_password: "891e010132a43c222bca841a651a765c"
+
+magento_admin_username: "admin"
+magento_admin_password: "admin123"
+magento_elasticsearch_port: "9200"
+
+magento_install_sample: False
 
 #Web服务器：apache | nginx，通过交互式选择获取
 magento_webs: apache
@@ -17,4 +20,3 @@ magento_owner: apache
 magento_db_password: "123456"
 magento_name: "magento"
 magento_title: "Magento"
-magento_package_cn: "http://libs.websoft9.com/apps/Magento/language-zh_hans_cn.tar.gz"
