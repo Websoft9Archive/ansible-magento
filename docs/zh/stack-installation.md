@@ -31,7 +31,11 @@
 
 #### 是否可以采用云厂商提供的 RDS 来存储 Magento 数据？
 
-可以
+可以, 执行下面命令可以更换Magento的数据。
+
+```
+magento setup:config:set --db-host=DB-HOST --db-name=DB-NAME --db-user=DB-USER --db-engine=DB-ENGINE --db-password=DB-PASSWORD
+```
 
 #### Cron job问题处理（Windows）
 

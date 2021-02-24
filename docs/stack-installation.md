@@ -31,4 +31,8 @@ MySQL
 
 #### Can I use Cloud database for Magento?
 
-Yes
+Yes, Use the following command to replace Magento's database.  
+
+```
+magento setup:config:set --db-host=DB-HOST --db-name=DB-NAME --db-user=DB-USER --db-engine=DB-ENGINE --db-password=DB-PASSWORD
+```
