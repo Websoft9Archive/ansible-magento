@@ -59,13 +59,16 @@
     chown -R {{magento_owner}}:{{magento_owner}} /data/wwwroot
 
 - block:
-  - name: Install magento sample data
-    expect:
-      command: /data/wwwroot/magento/bin/magento sampledata:deploy -n
-      responses:
-        "Username:": "{{magento_repo_username}}"
-        "Password:": "{{magento_repo_password}}"
-        "credentials": "y" 
+  - name: Copy the magento_install_sample.sh
+    template:
+      src: magento_install_sample.sh
+      dest: /tmp/magento_install_sample.sh
+
+  - name: Run the script install sample data
+    shell: bash /tmp/magento_install_sample.sh
+
+  - name: update the database and schema
+    shell: /data/wwwroot/magento/bin/magento setup:upgrade
   when: magento_install_sample
 
 - name: Install magento by magento setup cli
@@ -77,19 +80,11 @@
     --search-engine=elasticsearch7 --elasticsearch-host=127.0.0.1 --elasticsearch-port={{magento_elasticsearch_port}}
     ./magento setup:config:set --backend-frontname=admin -n
     php /data/wwwroot/magento/bin/magento module:disable Magento_TwoFactorAuth
+    ./magento cron:install --force
+    ./magento cron:run --group default
     ./magento indexer:reindex
   args:
     chdir: /data/wwwroot/magento/bin
-
-- name: Add cron job for magento
-  cron:
-    name: magento
-    user: "{{magento_owner}}"
-    job: "{{item}}"
-  with_items:
-    - "/usr/bin/php /data/wwwroot/magento/bin/magento cron:run | grep -v 'Ran jobs by schedule' >> /data/wwwroot/magento/var/log/magento.cron.log" 
-    - "/usr/bin/php /data/wwwroot/magento/update/cron.php >> /data/wwwroot/magento/var/log/update.cron.log"
-    - "/usr/bin/php /data/wwwroot/magento/bin/magento setup:cron:run >> /data/wwwroot/magento/var/log/setup.cron.log"
 
 - name: Remove default language dir
   file:
@@ -106,7 +101,7 @@
 - name: Permission directory
   shell: |
     find /data/wwwroot -type d -exec chmod 750 {} \;
-    find /data/wwwroot -not -type d -exec chmod 640 {} \;
+    find /data/wwwroot -not -type d -exec chmod 750 {} \;
     
 - name: Upload .htaccess
   template:

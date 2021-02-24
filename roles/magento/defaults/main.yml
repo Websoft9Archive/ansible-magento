@@ -20,3 +20,4 @@ magento_owner: apache
 magento_db_password: "123456"
 magento_name: "magento"
 magento_title: "Magento"
+magento_package_cn: "http://libs.websoft9.com/apps/Magento/language-zh_hans_cn.tar.gz"
