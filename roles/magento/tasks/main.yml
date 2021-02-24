@@ -125,11 +125,11 @@
       magento setup:upgrade -n
   when: sample_data_installation 
 
-  - name: restart php-fpm
-    service: name=php-fpm state=restarted
-    
-  - name: restart nginx or apache
-    service: name={{magento_service}} state=restarted
+- name: restart php-fpm
+  service: name=php-fpm state=restarted
+  
+- name: restart nginx or apache
+  service: name={{magento_service}} state=restarted
 
 # Check version,
 - block:
