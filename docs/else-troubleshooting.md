@@ -1,8 +1,8 @@
 # Troubleshooting
 
-We collect the most common troubleshooting of using Magento for your reference:
+If you're having trouble with running Magento, here is a quick guide to solve most common problems.
 
-> Many troubleshooting is closely related to the Server, if you can confirm troubleshooting is related to Cloud Platform, please refer to [Cloud Platform Documentation](https://support.websoft9.com/docs/faq/tech-instance.html)
+> Most faults about the Instance is closely related to the Instance provider, Cloud Platform. Provided you're sure the fault is caused by Cloud Platform, refer to [Cloud Platform Documentation](https://support.websoft9.com/docs/faq/tech-instance.html).
 
 #### Magento upgrade or install module failed?
 

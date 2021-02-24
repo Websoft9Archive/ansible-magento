@@ -1,18 +1,18 @@
 # SMTP
 
-Sending mail is a common feature for Magento. After a large number of user practice feedback, only one way is recommended, that is, using the **third-party STMP service** to send the email.
+Sending mail is a common feature for Magento. With a large number of users' practice and feedback, only one way is recommended, that is, using the **third-party SMTP service** to send the email.
 
-> Do not try to install **Sendmail** or other Mail server software on your Cloud Server for sending mail, because it is very difficulty in maintenance.
+> Do not try to install **Sendmail** or other Mail server software on your Cloud Server for sending mail, because it has great difficulty in maintenance.
 
-Follow is the sample using **SendGrid's SMTP Service** to configure sending mail for Magento:
+Taking **SendGrid's SMTP Service** as an example, refer to the following steps to configure sending mail:
 
-1. Log in SendGrid console, prepare your SMTP settings like the follow sample
+1. Log in SendGrid console, and prepare your SMTP settings.
    ```
    SMTP host: smtp.sendgrid.net
    SMTP port: 25 or 587 for unencrypted/TLS email, 465 for SSL-encrypted email
    SMTP Authentication: must be checked
    SMTP Encryption: must SSL
-   SMTP username: websoft9smpt
+   SMTP username: websoft9smtp
    SMTP password: #fdfwwBJ8f    
    ```
 2. Make sure your Magento is [linking Magento's Marketplace](/stack-installation.html#link-magento-marketplace)

@@ -15,7 +15,7 @@ home: false
 ## 改进
 
 本文档会持续改进，广泛吸收用户的需求。  
-如果您有好的想法，请点击页面下方”在Github上编辑“ 给我们反馈，欢迎Fork我们在[Github上的项目](https://github.com/Websoft9/ansible-magento)。
+如果您有好的想法，请点击页面下方**在Github上编辑** 给我们反馈，欢迎Fork我们在[Github上的项目](https://github.com/Websoft9/ansible-magento)。
 
 ## 赞助
 
@@ -25,4 +25,4 @@ Websoft9是一个为开源而生的平台，一直在致力于简化全球优质
 
 ## 合作
 
-Websoft9提供的镜像库已经发布主流云平台，并提供中英文文档，全球云用户均可方便使用。  
+Websoft9提供的镜像库已经发布主流云平台，并提供中英文文档，全球云用户可以方便的使用。  

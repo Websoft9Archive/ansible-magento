@@ -4,7 +4,7 @@ home: false
 
 # Overview
 
-This documentation is provided by [Websoft9](https://www.websoft9.com/), it can help users to acquire skills of Magento Deployment, Installation, Configuration, HTTPS, SMTP, Backup, Upgrade, Connect Instance and more.
+This documentation is provided by [Websoft9](https://www.websoft9.com/). It can help users to acquire skills of Magento Deployment, Installation, Configuration, HTTPS, SMTP, Backup, Upgrade, Connect Instance and more.
 
 [Magento](https://magento.org) is a Commerce Platform,it is the most popular commerce platform in the world, with more than 250,000 merchants around the globe selling more and driving innovation. Just check out our customer stories to find out how the Magento Advantage really works.
 
@@ -14,8 +14,9 @@ This documentation is provided by [Websoft9](https://www.websoft9.com/), it can 
 
 ## Improve
 
-This document will continue to improve and broadly absorb the needs of users. If you have good idea, please don't hesitate to give us feedback by "Edit this page on GitHub", and welcome you to fork this documentation on [Github](https://github.com/Websoft9/ansible-magento)
+To take more users' need into consideration, we're continuing to improve the documentation.  
+If you have any good idea, feel free to **Editing this page on GitHub** to give us feedback and we welcome you to fork this documentation on [GitHub](https://github.com/Websoft9/ansible-magento).
 
 ## Scope
 
-The image library provided by Websoft9 has released on the major Cloud Platform and provides Chinese and English documents, which can be easily used by cloud users worldwide.
+We have published the image library on the major Cloud Platforms and offered English and Chinese documents for guidance. Global users can get and use it with great convenience.

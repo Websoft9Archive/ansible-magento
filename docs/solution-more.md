@@ -2,13 +2,13 @@
 
 Each of the following solutions has been proven to be effective and we hope to be helpful to you.
 
-## Domain binding
+## Binding Domain
 
-The precondition for **Domain binding** is have completed the **Domain resolution** for Magento Instance.
+The precondition for binding a domain is that Magento can accessed by domain name.
 
-From the perspective of server security and subsequent maintenance considerations, the **Domain Binding** step cannot be omitted.
+When there is only one website on the server, you can visit the website without binding domain. While considering the server security and subsequent maintenance, **Binding Domain** is necessary.
 
-Magento domain name binding steps:
+Steps for binding Magento domain are as follows:
 
 1. Connect your Cloud Server
 2. Modify [vhost configuration file](/stack-components.md#apache), change the domain name item for you
@@ -46,6 +46,24 @@ Below is the methods for you installing modules online
 7. Magento will check the system environment before installation
 8. If installation is very slowly and have error, please refer to [Troubleshooting](/else-troubleshooting.html#magento-upgrade-or-install-module-failed)
 
+## Link Magento Marketplace
+
+Completed installation of Magento, suggest you make your Magento system link Magento's Marketplace. Once you have linked it, you can use many resourses on Marketplace.
+
+![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-setuptools-websoft9.png)  
+
+1. [Register a Magento Account](https://account.magento.com/applications/customer/login)
+2. Log in to Magento's Marketplace, create your **Access Key** from My Profile setting
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-smtp-1-websoft9.png)  
+3. Save Access Key
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-savemykey-websoft9.png)  
+4. Log in your Magento backend, open **SYSTEM** > **Web Setup Wizard**
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-websetupwz-websoft9.png) 
+5. Fill in the **System config** with your Access Key from Marketplace
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-setmkkey-websoft9.png) 
+6. Save it, and wait for the Waiting for a successful connection
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-setmkkeyss-websoft9.png) 
+7. Then, you can use the resources of Marketplace online
 
 ## Magento set language
 

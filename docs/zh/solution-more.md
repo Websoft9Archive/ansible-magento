@@ -46,6 +46,24 @@ Magento 域名绑定操作步骤：
 7. 安装时会进行系统环境检查，条件全面满足才可以开始安装
 8. 安装过程时间较长且报错，请查看[故障原因](/zh/else-troubleshooting.html#magento-在线升级或在线安装插件报错？)
 
+## 连接 Magento Marketplace
+
+安装 Magento 后，建议把你安装的 Magento 系统与 Magento 官方的 Marketplace 资源进行在线连接，这样便可以使用 Marketplace 上的大量资源
+
+![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-setuptools-websoft9.png)  
+
+1. 到官方 [注册 Magento 账号](https://account.magento.com/applications/customer/login)
+2. 登录 Marketplace，打到My Profile 的 Access Keys 页面新建一个自己的 Access Key; 
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-smtp-1-websoft9.png)  
+3. 保存 Access Key
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-savemykey-websoft9.png)  
+4. 登录自己的 Magento 后台，依次打开：【SYSTEM】> 【Web Setup Wizard】
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-websetupwz-websoft9.png) 
+5. 在【System config】设置项中输入你在 Marketplace 上获取的 Access Key
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-setmkkey-websoft9.png) 
+6. 成功保存，连接成功
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-setmkkeyss-websoft9.png) 
+7. 连接后，就可以很方便的使用 Marketplace 上的资源
 
 ## Magento 安装中文包
 

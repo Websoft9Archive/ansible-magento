@@ -4,15 +4,20 @@ Magento deployment package has installed the SSL module of Nginx and open Certif
 
 > In addition to the vhost configuration file, HTTPS settings do not need to modify any files in Nginx
 
-## Quick configuration
+## Quick start
 
-If you want to use a free certificate, just run the one command `certbot` on your instance to start the HTTPS deployment.
+### Automatic deployment
+
+If you want to use a free certificate, just run the one command `sudo certbot` on your instance to start the HTTPS deployment.
+
 ```
 sudo certbot
 ```
 
-If you have applied for a commercial certificate, complete the HTTPS configuration in just three steps:
-### For Magento (LAMP)
+### Manual deployment
+
+If you have applied for a commercial certificate, complete the HTTPS configuration in following steps:
+#### For Magento (LAMP)
 
 LAMP means that **Apache** for Web Server
 
@@ -40,7 +45,7 @@ LAMP means that **Apache** for Web Server
 4. Modify ServerName, SSLCertificateFile, SSLCertificateKeyFile
 5. Save it and [Restart Apache service](/admin-services.md#apache)
 
-### For Magento (LEMP)
+#### For Magento (LEMP)
 
 LEMP means that **Nginx** for Web Server
 
@@ -63,4 +68,4 @@ LEMP means that **Nginx** for Web Server
 
 ## Special Guide
 
-For details on configuring HTTPS pre-conditions, HTTPS configuration segment templates, precautions, detailed steps, and troubleshooting, refer to the [HTTPS Special Guide](https://support.websoft9.com/docs/faq/tech-https.html#nginx) provided by Websoft9 
+If failed to set HTTPS by taking the above steps, please view the [HTTPS Special Guide](https://support.websoft9.com/docs/faq/tech-https.html#nginx) provided by Websoft9, which includes solutions about configuring HTTPS pre-conditions, HTTPS configuration segment templates, precautions, detailed steps, troubleshooting and more.
