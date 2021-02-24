@@ -27,22 +27,34 @@ Apache module configuration file: */etc/httpd/conf.modules.d/00-base.conf*
 
 Magento on LEMP, the Web Server is Nginx    
 
-Nginx vhost configuration file: */etc/nginx/sites-available/default.conf*  
-Nginx main configuration file: */etc/nginx/nginx.conf*  
-Nginx logs file: */var/log/nginx/*
+Nginx vhost configuration file: */etc/nginx/conf.d/default.conf*    
+Nginx main configuration file: */etc/nginx/nginx.conf*   
+Nginx logs file: */var/log/nginx*  
+Nginx rewrite rules directory: */etc/nginx/conf.d/rewrite*  
+Nginx htpasswd file: */etc/nginx/.htpasswd/htpasswd.conf*  
 
-### MYSQL
+
+### MySQL
 
 MySQL installation directory: */usr/local/mysql*  
 MySQL data directory: */data/mysql*  
 MySQL configuration file: */etc/my.cnf*    
-MySQL Web Management URL: *http://Internet IP/phpmyadmin*, [get credential](/stack-accounts.md)
 
-### phpMyAdmin
+MySQL Web Management refer to [MySQL Management](/admin-mysql.md)
 
-phpMyAdmin installation directory: */data/apps/phpmyadmin*  
-phpMyAdmin configuration file: */data/apps/phpmyadmin/config.inc.php*   
-phpMyAdmin vhost configuration file: */etc/httpd/conf.d/phpMyAdmin.conf* or */etc/nginx/php.conf*  
+### Docker
+
+Docker root directory: */var/lib/docker*  
+Docker image directory: */var/lib/docker/image*   
+Docker daemon.json: please create it when you need and save to to the directory */etc/docker*   
+
+###  phpMyAdmin
+
+phpMyAdmin is a visual MySQL management tool, is installed based on docker.  
+
+phpMyAdmin directory：*/data/apps/phpmyadmin*  
+phpMyAdmin docker compose file：*/data/apps/phpmyadmin/docker-compose.yml* 
+
 
 ### Redis
 
@@ -52,9 +64,11 @@ Redis logs file: */var/log/redis/redis.log*
 
 ## Ports
 
-You can control(open or shut down) ports by **[Security Group Setting](https://support.websoft9.com/docs/faq/zh/tech-instance.html)** of your Cloud Server whether the port can be accessed from Internet.
+Open or close ports by **[Security Group Setting](https://support.websoft9.com/docs/faq/tech-instance.html)** of your Cloud Server to decide whether the port can be accessed from Internet.  
 
-These ports should be opened for this application:
+You can run the cmd `netstat -tunlp` to check all related ports.  
+
+The following are the ports you may use:
 
 | Name | Number | Use |  Necessity |
 | --- | --- | --- | --- |
@@ -64,7 +78,7 @@ These ports should be opened for this application:
 
 ## Version
 
-You can see the version from product page of Marketplace. However, after being deployed to your server, the components will be automatically updated, resulting in a certain change in the version number. Therefore, the exact version number should be viewed by running the command on the server:
+You can see the version on product pages at Marketplace. However, after being deployed to your server, the components will be updated automatically, resulting in a certain change in the version number. Therefore, run the command on the server to view the exact version number. 
 
 ```shell
 # Check all components version

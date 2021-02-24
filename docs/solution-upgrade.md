@@ -1,26 +1,27 @@
 # Update & Upgrade
 
-Updates and upgrades are one of the maintenance tasks for sytem. Programs that are not upgraded for a long time, like buildings that are not maintained for a long time, will accelerate aging and gradually lose functionality until they are unavailable.
+To update and upgrade is one of the main task for system maintenance. Like buildings without maintenance for a long time, programs without upgrading will age faster, lose functionality until they are unavailable.
 
-You should know the differences between the terms **Update** and **Upgrade**([Extended reading](https://support.websoft9.com/docs/faq/tech-upgrade.html#update-vs-upgrade))
-- Operating system patching is **Update**, Ubuntu16.04 to Ubuntu18.04 is **Upgrade**
-- MySQL5.6.25 to MySQL5.6.30 is **Update**, MySQL5.6 to MySQL5.7 is **Upgrade**
+Get to know the differences between the terms **Update** and **Upgrade**([Extended reading](https://support.websoft9.com/docs/faq/tech-upgrade.html#update-vs-upgrade))
+- Patching operating system is **Updating**, while Ubuntu16.04 to Ubuntu18.04 means **Upgrading**.
+- MySQL5.6.25 to MySQL5.6.30 means **Updating**, yet MySQL5.6 to MySQL5.7 means **Upgrading**.
 
-For Magento maintenance, focus on the following two Update & Upgrade jobs
+Maintenance for Magento includes the following two tasks.
 
-- Sytem update(Operating System and Running Environment) 
-- Magento upgrade 
+- Update system (Operating System and Runtime) 
+- Upgrade Magento
 
-## System Update
+## Update System 
 
-Run an update command to complete the system update:
+Run a command to complete updating the system:
 
 ``` shell
-#For Centos&Redhat
-yum update -y
 
 #For Ubuntu&Debian
-apt update && apt upgrade -y
+sudo apt update && apt upgrade -y
+
+#For Centos&Redhat
+sudo yum update -y --skip-broken
 ```
 > This deployment package is preconfigured with a scheduled task for automatic updates. If you want to remove the automatic update, please delete the corresponding Cron
 

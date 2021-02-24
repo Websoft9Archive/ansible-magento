@@ -2,13 +2,13 @@
 
 Each of the following solutions has been proven to be effective and we hope to be helpful to you.
 
-## Domain binding
+## Binding Domain
 
-The precondition for **Domain binding** is have completed the **Domain resolution** for Magento Instance.
+The precondition for binding a domain is that Magento can accessed by domain name.
 
-From the perspective of server security and subsequent maintenance considerations, the **Domain Binding** step cannot be omitted.
+When there is only one website on the server, you can visit the website without binding domain. While considering the server security and subsequent maintenance, **Binding Domain** is necessary.
 
-Magento domain name binding steps:
+Steps for binding Magento domain are as follows:
 
 1. Connect your Cloud Server
 2. Modify [vhost configuration file](/stack-components.md#apache), change the domain name item for you

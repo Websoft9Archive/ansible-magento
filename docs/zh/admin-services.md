@@ -5,17 +5,10 @@
 ### Apache
 
 ```shell
-#For Centos&Redhat
-sudo systemctl start httpd
-sudo systemctl stop httpd
-sudo systemctl restart httpd
-sudo systemctl status httpd
-
-#For Ubuntu&Debian
-sudo systemctl start apache2
-sudo systemctl stop apache2
-sudo systemctl restart apache2
-sudo systemctl status apache2
+sudo systemctl start apache
+sudo systemctl stop apache
+sudo systemctl restart apache
+sudo systemctl status apache
 ```
 
 ### Nginx
@@ -46,8 +39,50 @@ sudo systemctl status mysql
 
 ### Redis
 ```shell
-sudo systemctl star redis
+sudo systemctl start redis
 sudo systemctl stop redis
 sudo systemctl restart redis
 sudo systemctl status redis
+```
+
+### phpMyAdmin
+
+```shell
+sudo docker start phpmyadmin
+sudo docker stop phpmyadmin
+sudo docker restart phpmyadmin
+sudo docker stats pgadmin
+```
+
+### Docker
+
+```shell
+sudo systemctl start docker
+sudo systemctl restart docker
+sudo systemctl stop docker
+sudo systemctl status docker
+```
+
+### Docker-compose服务
+
+```
+#创建容器编排
+sudo docker-compose up
+
+#创建容器编排并重建有变化的容器
+sudo docker-compose up -d
+
+#启动/重启
+sudo docker-compose start
+sudo docker-compose stop
+sudo docker-compose restart
+```
+
+### Varnish
+
+```shell
+sudo systemctl start varnish
+sudo systemctl stop varnish
+sudo systemctl restart varnish
+sudo systemctl status varnish
 ```

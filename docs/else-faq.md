@@ -99,7 +99,7 @@ Websoft9 Magento stack supports the deployment of multiple applications (website
 
 #### What's the difference between Deployment and Installation?
 
-- Deployment is a process of installing and configuring a sequence of software in sequence in a different order, which is a complex system engineering.  
+- Deployment is a process of installing and configuring a series of software to the server in a different order, which is a complex system engineering.  
 - Installation is the process of starting the initial wizard after the application is prepared.  
 - Installation is simpler than deployment. 
 
@@ -109,4 +109,4 @@ Cloud platform refers to platform manufacturers that provide cloud computing ser
 
 #### What is the difference between Instance, Cloud Server, Virtual Machine, ECS, EC2, CVM, and VM?
 
-No difference, just the terminology used by different manufacturers, actually cloud servers
+No difference. All refer to cloud servers. They are the different terminology used by manufacturers.
