@@ -22,16 +22,17 @@
 - name: Remove extra dir
   shell: rm -rf /data/wwwroot/*{{magento_name}}*
 
-- name: mkdir app folder
+- name: Create app folder dir
   file: 
     path: /data/wwwroot/{{magento_name}}
     state: directory
     mode: 0750
 
-- name: Upload composer authentication keys
-  template:
-    src: .config
-    dest: /home/magento
+- name: Create composer dir
+  file: 
+    path: /root/.config/composer
+    state: directory
+    recurse: yes
 
 - name: Setfacl for Magento own /usr/bin/composer
   shell: |
@@ -41,7 +42,7 @@
 - name: Upload composer authentication keys to root
   template:
     src: .config
-    dest: /root
+    dest: /root/auth.json
 
 - name: Create Magento site by composer, -n for interaction
   shell: composer create-project --repository=https://repo.magento.com/ magento/project-community-edition /data/wwwroot/magento -n
