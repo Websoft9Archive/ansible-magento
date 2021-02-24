@@ -41,8 +41,8 @@
 
 - name: Upload composer authentication keys to root
   template:
-    src: .config
-    dest: /root/auth.json
+    src: auth.json
+    dest: /root/.config/composer/auth.json
 
 - name: Create Magento site by composer, -n for interaction
   shell: composer create-project --repository=https://repo.magento.com/ magento/project-community-edition /data/wwwroot/magento -n
