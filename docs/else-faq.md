@@ -23,7 +23,7 @@ sudo /data/wwwroot/magento/bin/magento setup:config:set --backend-frontname=[you
 
 #### Why should I link to the Magento Marketplace?
 
-Just link Magento Marketplace, you can use the resources of Marketplace online. [Link Marketplace](/stack-installation.html#link-magento-marketplace)
+Just link Magento Marketplace, you can use the resources of Marketplace online. [Link Marketplace](/solution-more.html#link-magento-marketplace)
 
 #### What the difference between the Magento(LAMP) and Magento(LEMP) ?
 
