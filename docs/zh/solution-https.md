@@ -40,7 +40,7 @@ Magento(LAMP) 即运行环境采用 **Apache** 作为 Web Server
     SSLEngine on
     SSLCertificateFile  /data/cert/magento.yourdomain.com.crt
     SSLCertificateKeyFile  /data/cert/magento.yourdomain.com.key
-    SSLCertificateChainFile  /data/cert/www.yourdomain.com_chain.crt
+    SSLCertificateChainFile  /data/cert/magento.yourdomain.com_chain.crt
     </VirtualHost>
    #-----HTTPS template end------------
    ```
