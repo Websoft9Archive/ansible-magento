@@ -10,35 +10,12 @@ If you have completed the Magento deployment on Cloud Platform, the following st
 
 ## Magento Installation Wizard
 
-1. If you are installing 2.4.0 or the latest version,no initial setup is required,visit the URL *https://domain* or *https://Internet IP*,Magento frontpage likes below
-    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/magento/magento-init-websoft9.png)
-2. If you are installing 2.4.0 or the latest version,visit the URL *https://domain/admin* or *https://Internet IP/admin*,login to backend of Magento  
-   Administrator username: root,Administrator password: stored in the file of your server instance: /credentials/password.txt.
-    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-check-websoft9.png)
-3. If you are installing version 2.3.5 or earlier, you need to install according to the wizard. Please refer to wizard 3 ~ 12.  
-   Using local Chrome or Firefox to visit the URL *https://domain* or *https://Internet IP*, start to install    
-    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-agree-websoft9.png)
-4. Accept license and environment check passed, then go to next step
-    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-check-websoft9.png)
-5. Database connection configuration, you can use the MySQL in this Server([Don's know password](/stack-accounts.html#mysql)), and you can use other database services
-    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/magento/magento-db-websoft9.png)
-6. Select the language and go to next step
-    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-setlanguage-websoft9.png)
-7. Set the administrator URL
-    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/magento/magento-setbackend-websoft9.png)
-8. Set the administrator account
-    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-setadmin-websoft9.png)
-9. Click the "Install Now" and Waiting for 2-3 minutes
-    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-startinstall-websoft9.png)
-    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-wtinstall-websoft9.png)
-10. OK, it has been installed successfully, the page displays the installed site information. Click "Launch Magento Admin".
-    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-ss-websoft9.png)
-11. Login to backend of Magento  
-    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/magento/mg10.png)
-12. You can see the console of Mangento now
-    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-backend-websoft9.png)
-13. Magento frontpage likes below
-    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-frontend-websoft9.png)
+1. Using local browser visit the URL http://DNS or http://Server's Internet IP, enter to Magento Mall home page 
+    ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/magento/magento-mall-websoft9.png)
+2. Using local browser visit the URL http://DNS or http://Server's Internet IP, enter to login interface  
+    ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/magento/magento-login-websoft9.png)
+3. Login it to Magento console [(Don't know password?)](/stack-accounts.md)  
+    ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/magento/magento-backend-websoft9.png)
 
 > Refer to [Magento Docs](https://magento.com/resources/technical) to get more details
 
@@ -54,4 +31,8 @@ MySQL
 
 #### Can I use Cloud database for Magento?
 
-Yes
+Yes, Use the following command to replace Magento's database.  
+
+```
+magento setup:config:set --db-host=DB-HOST --db-name=DB-NAME --db-user=DB-USER --db-engine=DB-ENGINE --db-password=DB-PASSWORD
+```
