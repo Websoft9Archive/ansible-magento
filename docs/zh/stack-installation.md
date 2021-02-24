@@ -39,8 +39,8 @@ magento setup:config:set --db-host=DB-HOST --db-name=DB-NAME --db-user=DB-USER -
 
 #### Cron job问题处理（Windows）
 
-Windows下安装 Magento 后，若出现 ”One or more indexers are invalid. Make sure your Magento cron job is running.” 的提示,请执行以下步骤:
+Windows下安装 Magento 后，若出现 **One or more indexers are invalid. Make sure your Magento cron job is running** 的提示,请执行以下步骤:
 
 1. 双击右下角xampp界面,点击shell按钮打开命令行窗口;
-2. 输入“php htdocs\magento\bin\magento indexer:reindex”即可；
+2. 输入 `php htdocs\magento\bin\magento indexer:reindex` 即可；
 3. 回到magento界面，刷新页面，该问题即可解决。
