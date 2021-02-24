@@ -52,5 +52,5 @@ init_application:
     commands:
       - internet_ip=`curl ifconfig.me`
       - /data/wwwroot/magento/bin/magento setup:store-config:set --base-url=http://$internet_ip
-      - /data/wwwroot/magento/bin/magento admin:user:create --admin-firstname=admin --admin-lastname=admin --admin-email=help@websoft9.com --admin-user=admin --admin-password=$newpassword
+      - /data/wwwroot/magento/bin/magento admin:user:create --admin-firstname=xu --admin-lastname=way --admin-email=help@websoft9.com --admin-user=admin --admin-password=$newpassword
       - php /data/wwwroot/magento/bin/magento cache:flush
