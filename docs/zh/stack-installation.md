@@ -11,7 +11,7 @@
 ## Magento 安装向导
 
 1. 使用浏览器访问网址：http://域名 或 http://服务器公网IP, 进入商店首页  
-    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-init-websoft9.png)
+    ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-mall-websoft9.png)
 2. 使用浏览器访问网址：*http://域名/admin* 或 *http://Internet IP/admin*，进入后台登陆页面  
     ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-login-websoft9.png)
 3. 输入用户名和密码[（不知道密码？）](/zh/stack-accounts.md)，登录到 AWX 后台管理界面  
