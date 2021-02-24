@@ -46,6 +46,24 @@ Below is the methods for you installing modules online
 7. Magento will check the system environment before installation
 8. If installation is very slowly and have error, please refer to [Troubleshooting](/else-troubleshooting.html#magento-upgrade-or-install-module-failed)
 
+## Link Magento Marketplace
+
+Completed installation of Magento, suggest you make your Magento system link Magento's Marketplace. Once you have linked it, you can use many resourses on Marketplace.
+
+![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-setuptools-websoft9.png)  
+
+1. [Register a Magento Account](https://account.magento.com/applications/customer/login)
+2. Log in to Magento's Marketplace, create your **Access Key** from My Profile setting
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-smtp-1-websoft9.png)  
+3. Save Access Key
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-savemykey-websoft9.png)  
+4. Log in your Magento backend, open **SYSTEM** > **Web Setup Wizard**
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-websetupwz-websoft9.png) 
+5. Fill in the **System config** with your Access Key from Marketplace
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-setmkkey-websoft9.png) 
+6. Save it, and wait for the Waiting for a successful connection
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-setmkkeyss-websoft9.png) 
+7. Then, you can use the resources of Marketplace online
 
 ## Magento set language
 
