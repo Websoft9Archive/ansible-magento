@@ -56,7 +56,6 @@
     find var generated vendor pub/static pub/media app/etc -type f -exec chmod g+w {} +
     find var generated vendor pub/static pub/media app/etc -type d -exec chmod g+ws {} +
     chmod u+x bin/magento
-    chown -R {{magento_owner}}:{{magento_owner}} /data/wwwroot
 
 - block:
   - name: Copy the magento_install_sample.sh
@@ -100,7 +99,8 @@
   shell: |
     find /data/wwwroot -type d -exec chmod 750 {} \;
     find /data/wwwroot -not -type d -exec chmod 640 {} \;
-    find /data/wwwroot/magento/bin/magento -not -type d -exec chmod 750 {} \;
+    chmod 750 /data/wwwroot/magento/bin/magento 
+    chown -R {{magento_owner}}:{{magento_owner}} /data/wwwroot
 
 # 根据不同的基础环境分别处理
 - block:
