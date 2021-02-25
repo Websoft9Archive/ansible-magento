@@ -67,8 +67,6 @@
   - name: Run the script install sample data
     shell: bash /tmp/magento_install_sample.sh
 
-  - name: update the database and schema
-    shell: /data/wwwroot/magento/bin/magento setup:upgrade
   when: magento_install_sample
 
 - name: Install magento by magento setup cli
