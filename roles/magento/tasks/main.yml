@@ -108,7 +108,7 @@
     template:
       src: default.conf.jinja2
       dest: '{{ magento_vhost_dir }}'
-    force: yes
+      force: yes
     when: magento_service is nginx 
 
   - name: restart php-fpm
