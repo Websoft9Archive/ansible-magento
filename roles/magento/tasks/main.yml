@@ -107,9 +107,9 @@
   - name: Copy nginx virtual host configure
     template:
       src: default.conf.jinja2
-      dest: '{{ magento_vhost_dir }}'
+      dest: '{{magento_vhost_dir}}/{{magento_vhost_src}}'
       force: yes
-    when: magento_service is nginx 
+    when: magento_service == "nginx" 
 
   - name: restart php-fpm
     service: name=php-fpm state=restarted
