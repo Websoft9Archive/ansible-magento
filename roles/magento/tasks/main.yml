@@ -104,11 +104,18 @@
 
 # 根据不同的基础环境分别处理
 - block:
+  - name: Copy nginx virtual host configure
+    template:
+      src: default.conf.jinja2
+      dest: '{{ magento_vhost_dir }}'
+    force: yes
+    when: magento_service is nginx 
+
   - name: restart php-fpm
     service: name=php-fpm state=restarted
-    
-  - name: restart nginx or apache
-    service: name={{magento_service}} state=restarted
+
+  - name: restart {{ magento_service }}
+    service: name={{ magento_service }} state=restarted
 
 # Check version,
 - block:

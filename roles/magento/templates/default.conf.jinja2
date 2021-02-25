@@ -1,0 +1,15 @@
+upstream fastcgi_backend {
+{% if ansible_os_family  == 'RedHat' %}
+  server   unix:/run/php-fpm.sock;
+{% endif %}
+{% if ansible_os_family  == 'Debian' %}
+  server   unix:/run/php/php-fpm.sock;
+{% endif %}
+}
+
+server {
+  listen 80;
+  server_name www.example.com;
+  set $MAGE_ROOT /data/wwwroot/magento;
+  include /data/wwwroot/magento/nginx.conf.sample;
+}
