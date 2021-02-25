@@ -1,6 +1,7 @@
 # CLI
 
-Magento提供了强大CLI工具 `magento`，需要带路径使用： 例如，**/data/wwwroot/magento/bin/magento**
+Magento提供了强大CLI工具 `magento`，需要带路径使用：  
+例如，**/data/wwwroot/magento/bin/magento**
 
 ```
 [root@iZj6cai7mtngacn1syaqv6Z ~]# /data/wwwroot/magento/bin/magento
