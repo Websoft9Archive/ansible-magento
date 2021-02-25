@@ -98,10 +98,11 @@
     remote_src: yes
 
 # 系统通用
-- name: Permission directory
+- name: Set permission, bin/magento file permission must be 0750 because CLI need x permission
   shell: |
     find /data/wwwroot -type d -exec chmod 750 {} \;
-    find /data/wwwroot -not -type d -exec chmod 750 {} \;
+    find /data/wwwroot -not -type d -exec chmod 640 {} \;
+    find /data/wwwroot/magento/bin/magento -not -type d -exec chmod 750 {} \;
     
 - name: Upload .htaccess
   template:
