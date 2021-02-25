@@ -88,7 +88,10 @@ sudo systemctl status varnish
 ```
 
 ### RabbitMQ
+
+```shell
 sudo systemctl start rabbitmq-server
 sudo systemctl stop rabbitmq-server
 sudo systemctl restart rabbitmq-server
 sudo systemctl status rabbitmq-server
+```
