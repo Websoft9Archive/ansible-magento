@@ -19,6 +19,10 @@ If you have completed the Magento deployment on Cloud Platform, the following st
 
 > Refer to [Magento Docs](https://magento.com/resources/technical) to get more details
 
+## Magento Setup wizard
+
+Coming Soon
+
 ## Q&A
 
 #### I can't visit the start page of Magento?

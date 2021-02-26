@@ -1,7 +1,7 @@
 # CLI
 
 Magento provides a powerful cli tool `magento`, you can use it with path.  
-e.g **/data/wwwroot/magento/bin/magento**
+e.g **sudo /data/wwwroot/magento/bin/magento**
 
 ```
 [root@iZj6cai7mtngacn1syaqv6Z ~]# /data/wwwroot/magento/bin/magento

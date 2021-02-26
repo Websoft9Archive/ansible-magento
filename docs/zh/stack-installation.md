@@ -19,6 +19,10 @@
 
 > 需要了解更多Magento的使用，请参考官方文档：[Magento Docs](https://magento.com/resources/technical)
 
+## Magento 入门向导
+
+Coming Soon
+
 ## 常见问题
 
 #### 浏览器打开IP地址，无法访问 Magento（白屏没有结果）？
