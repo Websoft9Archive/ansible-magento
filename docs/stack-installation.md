@@ -10,10 +10,14 @@ If you have completed the Magento deployment on Cloud Platform, the following st
 
 ## Magento Installation Wizard
 
-1. Using local browser visit the URL http://DNS or http://Server's Internet IP, enter to Magento Mall home page 
+The latest Magento has used the CLI to complete the installation wizard, so you can use it directly:
+
+1. Using local browser visit the URL *http://DNS* or *http://Server's Internet IP*, enter to Magento Mall home page 
     ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/magento/magento-mall-websoft9.png)
-2. Using local browser visit the URL http://DNS or http://Server's Internet IP, enter to login interface  
+
+2. Using local browser visit the URL *http://DNS* or *http://Server's Internet IP/admin*, enter to login interface  
     ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/magento/magento-login-websoft9.png)
+
 3. Login it to Magento console [(Don't know password?)](/stack-accounts.md)  
     ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/magento/magento-backend-websoft9.png)
 

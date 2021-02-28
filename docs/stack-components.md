@@ -42,6 +42,21 @@ MySQL configuration file: */etc/my.cnf*
 
 MySQL Web Management refer to [MySQL Management](/admin-mysql.md)
 
+### Varnish
+
+Varnish installation directory: */data/varnish*  
+Varnish logs directory: */data/logs/varnish*  
+
+### RabbitMQ
+
+RabbitMQ installation directory: */data/rabbitmq*  
+RabbitMQ logs directory: */data/logs/rabbitmq*  
+
+### Elasticsearch
+
+Elasticsearch installation directory: */data/elasticsearch*  
+Elasticsearch logs directory: */data/logs/elasticsearch*  
+
 ### Docker
 
 Docker root directory: */var/lib/docker*  
@@ -54,7 +69,6 @@ phpMyAdmin is a visual MySQL management tool, is installed based on docker.
 
 phpMyAdmin directory：*/data/apps/phpmyadmin*  
 phpMyAdmin docker compose file：*/data/apps/phpmyadmin/docker-compose.yml* 
-
 
 ### Redis
 

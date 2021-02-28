@@ -10,10 +10,14 @@
 
 ## Magento 安装向导
 
-1. 使用浏览器访问网址：http://域名 或 http://服务器公网IP, 进入商店首页  
+Magento 最新版本已经采用命令行完成了安装向导，即可直接使用：
+
+1. 使用本地电脑浏览器访问网址：http://域名 或 http://服务器公网IP, 可以直接进入商城首页  
     ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-mall-websoft9.png)
-2. 使用浏览器访问网址：*http://域名/admin* 或 *http://Internet IP/admin*，进入后台登陆页面  
+
+2. 访问网址：*http://域名/admin* 或 *http://服务器公网IP/admin*，进入后台登陆页面  
     ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-login-websoft9.png)
+
 3. 输入用户名和密码[（不知道密码？）](/zh/stack-accounts.md)，登录到 Magento 后台管理界面  
     ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-backend-websoft9.png)
 
@@ -31,11 +35,11 @@ Coming Soon
 
 #### 本部署包采用的哪个数据库来存储 Magento 数据？
 
-是MySQL
+安装在服务器上的 MySQL 数据库
 
 #### 是否可以采用云厂商提供的 RDS 来存储 Magento 数据？
 
-可以，执行下面命令可以更换Magento的数据。
+可以，执行下面命令可以更换 Magento 所使用的数据库
 
 ```
 magento setup:config:set --db-host=DB-HOST --db-name=DB-NAME --db-user=DB-USER --db-engine=DB-ENGINE --db-password=DB-PASSWORD

@@ -4,7 +4,7 @@ Magento提供了强大CLI工具 `magento`，需要带路径使用：
 例如，**sudo /data/wwwroot/magento/bin/magento**
 
 ```
-[root@iZj6cai7mtngacn1syaqv6Z ~]# /data/wwwroot/magento/bin/magento
+$ /data/wwwroot/magento/bin/magento
 Magento CLI 2.4.2
 
 Usage:

@@ -38,7 +38,6 @@ Nginx 日志文件： */var/log/nginx*
 Nginx 伪静态规则目录： */etc/nginx/conf.d/rewrite*  
 Nginx 验证访问文件：*/etc/nginx/.htpasswd/htpasswd.conf*  
 
-
 ### MySQL
 
 MySQL 安装路径: */usr/local/mysql*  
@@ -46,6 +45,21 @@ MySQL 数据文件 */data/mysql*
 MySQL 配置文件: */etc/my.cnf*  
 
 MySQL 可视化管理参考 [MySQL 管理](/zh/admin-mysql.md) 章节。
+
+### Varnish
+
+Varnish 安装目录： */data/varnish*  
+Varnish 日志目录： */data/logs/varnish*  
+
+### RabbitMQ
+
+RabbitMQ 安装目录： */data/rabbitmq*  
+RabbitMQ 日志目录： */data/logs/rabbitmq*  
+
+### Elasticsearch
+
+Elasticsearch 安装目录： */data/elasticsearch*  
+Elasticsearch 日志目录： */data/logs/elasticsearch*  
 
 ### phpMyAdmin
 
@@ -117,11 +131,3 @@ mysql -V
 # Redis version
 redis-server -v
 ```
-
-## XAMPP
-
-有部分用户可能使用的是 Windows 下的 Magento 部署包，这个版本下虚拟主机配如下：
-
-1. 请远程桌面到服务器，打开C:\xampp\apache\conf\extra\httpd-vhosts.conf文件
-2. 修改配置文件ServerName,ServerAlias项的值替换成你的域名信息，保存；
-3. 重启Apache服务后生效
