@@ -25,8 +25,6 @@
 ```
  > 通过域名访问的情况，请参照[域名绑定](solution-more.md/#域名绑定)
 
-需要修改配置文件（/data/wwwroot/magento/app/etc/env.php）对应的数据库 password 参数即可。
-
 #### 修改了数据库密码 Magento 不能访问？
 
 若已完成 Magento 安装向导，再通过 phpMyAdmin 修改数据库密码，此候 Magento 就会连不上数据库

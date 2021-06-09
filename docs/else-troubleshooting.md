@@ -16,6 +16,13 @@ Make sure `php_value memory_limit` not lower than 2048M
     php_value memory_limit 2048M
     php_value max_execution_time 18000
 ```
+#### When the Magento site is accessed through IP, the server IP is changed and cannot be accessed?
+
+Use the **SSH** to connect your Server and run the CLI command
+```shell
+    /data/wwwroot/magento/bin/magento setup:store-config:set --base-url=http://Server's Internet IP # modify it for you
+```
+ > When access by domain name, refer to [Binding Domain](solution-more.md/#Binding Domain)
 
 #### Database service could not be started?
 
