@@ -29,6 +29,12 @@ Magento 域名绑定操作步骤：
 
    ```
 3. 保存配置文件，[重启服务](/zh/admin-services.html#apache)
+4. 通过SSH连接云服务器，运行下面的CLI命令
+   ```shell
+      /data/wwwroot/magento/bin/magento setup:store-config:set --base-url=http://www.mydomain.com # 修改成您的实际域名
+   ```
+
+
 
 ## Magento 安装扩展
 

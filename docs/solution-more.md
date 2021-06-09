@@ -29,7 +29,10 @@ Steps for binding Magento domain are as follows:
 
    ```
 3. Save it and restart [Web Service](/admin-services.md#apache)
-
+4. Use the **SSH** to connect your Server and run the CLI command 
+   ```shell
+      /data/wwwroot/magento/bin/magento setup:store-config:set --base-url=http://www.mydomain.com  # modify it for you
+   ```
 
 ## Magento install modules
 
