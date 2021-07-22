@@ -105,24 +105,24 @@ php bin/magento maintenance:disable
 
 Magento 除了系统给出的商品属性，还允许用户通过后台“STORES”->"Attributes"->"Product"添加额外的商品属性。添加的额外属性的属性值设置不正确就会影响前台的商品展示，出现如图错误。通过以下步骤可以排查此问题：
 
-![magento]（https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-products-matching-the-selection-websoft9.png）
+![magento](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-products-matching-the-selection-websoft9.png)
 
 
 1. 查看日志/data/wwwroot/magento/var/log/exception.log，看是否是添加的属性引发的异常，本例中查看到“eanl3”属性有异常
 
-![magento]（https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-log-websoft9.png）
+![magento](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-log-websoft9.png)
 
 2. 进入后台“STORES”->"Attributes"->"Product"，查看相关属性设置.
 
-![magento]（https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-product-attribute-websoft9.png）
+![magento](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-product-attribute-websoft9.png)
 
 3. 在属性列表中点击“ean13”，进入设置界面
 
-![magento]（https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-product-attribute1-websoft9.png）
+![magento](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-product-attribute1-websoft9.png)
 
 4. 属性设置
 
-![magento]（https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-product-attribute2-websoft9.png）
+![magento](https://libs.websoft9.com/Websoft9/DocsPicture/zh/magento/magento-product-attribute2-websoft9.png)
 
 5. 清空浏览器缓存，重新打开网站
 
