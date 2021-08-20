@@ -6,7 +6,7 @@
 
 [English](/README.md) | [简体中文](/README-zh.md)  
 
-**Magento Cloud Installer**, developed by [Websoft9](https://www.websoft9.com), is an automatic installation program of [Magento](https://magento.com/products/magento-open-source) based on Ansible and shell. It helps user install Magento and pre-configure required items automatically and users only need to run a command on Linux. It simplifies the complicated installation and initialization process.  
+**Magento Cloud Installer**, developed by [Websoft9](https://www.websoft9.com), is an automatic installation program of [Magento](https://magento.com/) based on Ansible and shell. It helps user install Magento and pre-configure required items automatically and users only need to run a command on Linux. It simplifies the complicated installation and initialization process.  
 
 ## System Requirement
 
@@ -14,16 +14,16 @@ System Requirement to install this repository are as following：
 
 | Conditions       | Details                               | Notes                |
 | ------------------- | --------------------------------| -------------------- |
-| Operating System   | CentOS7.x, Ubuntu18.04, Amazon Linux2 | Optional                 |
+| Operating System   | CentOS7.x, Ubuntu20.04, Amazon Linux2 | Optional                 |
 | Public Cloud     | AWS, Azure, Alibaba Cloud, HUAWEI ClOUD, Tencent Cloud    | Optional                 |
 | Private Cloud     | KVM, VMware, VirtualBox, OpenStack    | Optional                 |
-| Server Configuration | vCPU no less than 2 core, Memory no less than  4 GIB, Storage no less than 10 GB, Bandwidth no less than 100M ||
+| Server Configuration | vCPU no less than 2 core, Memory no less than 4 GIB, Storage no less than 20 GB, Swap no less than 2GB |Bandwidth no less than 100M|
 
-To learn more information, please view [System requirements](https://devdocs.magento.com/guides/v2.4/install-gde/system-requirements.html).
+To learn more information, please view [Installation & Configuration](https://www.magento.com/download.html).
 
 ## Ecosystem
 
-Core components of this repository: Magento, Nginx/Apache, PHP, MySQL, Varnish, RabbitMQ, Redis, Docker, phpMyAdmin on docker
+Core components of this repository: Magento, MySQL8.0, MongoDB, adminMongo on Docker, phpMyAdmin on Docker, Nginx or Apache(optional)
 
 Learn more about [Parameters](/docs/stack-components.md).
 
@@ -48,11 +48,7 @@ Follow our [Magento image](https://apps.websoft9.com/magento) for installation o
 
 ## Documentation
 
-**[Magento Administrator Guide](https://support.websoft9.com/docs/magento)** 
-
-## Changelog
-
-Detailed changes are documented in the [CHANGELOG](/CHANGELOG.md).
+**[Administrator Guide](https://support.websoft9.com/docs/magento)** 
 
 ## License
 
@@ -64,14 +60,16 @@ This program provided by Websoft9 contains a series of software with separate co
 
 ## FAQ
 
+#### How to install and view the latest release?
+
+This repository install way is Docker install, you can  view the version from [Official URL](https://hub.docker.com/r/bitnami/magento/tags?page=1&ordering=last_updated).  
+We will check [Release version](https://github.com/Websoft9/ansible-magento/releases) regularly. Update and test this project to ensure that users can successfully install the required version of Magento.
+
 #### Can I run this repository on Ansible Tower? 
 
 Yes.
 
-#### How to install and view the latest release?
+#### Although the results of the deploy by image are consistent with the results of deploy by script, what is the difference between the two deployment methods?
 
-This repository used composer as the install tool, so you can always install the latest version of Mangento
+Suggest you read the document [Deploy by Image vs Deploy by Script](https://support.websoft9.com/docs/faq/bz-product.html#deployment-comparison).
 
-#### Is the default password safe?
-
-The solution used the random password solution, every deployment produce unique password which is different from other users
