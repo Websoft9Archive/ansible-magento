@@ -1,0 +1,18 @@
+{
+  "name": "magento",
+  "trademark": "Magento",
+  "official_url": "https://magento.com/",
+  "support_os": "CentOS7.x, Ubuntu20.04, Amazon Linux2",
+  "requirements_cpu": "2",
+  "requirements_memory": "4",
+  "requirements_Bandwidth": "100",
+  "requirements_disk": "20",
+  "requirements_swap": "2",
+  "requirements_configure_url": "https://www.magento.com/download.html",
+  "components": "Magento, MySQL8.0, MongoDB, adminMongo on Docker, phpMyAdmin on Docker, Nginx or Apache(optional)",
+  "install_way": {
+    "en": "Docker install",
+    "zh": "Docker 安装"
+  },
+  "install_url": "https://hub.docker.com/r/bitnami/magento/tags?page=1&ordering=last_updated"
+}
