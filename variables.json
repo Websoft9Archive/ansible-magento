@@ -8,11 +8,11 @@
   "requirements_Bandwidth": "100",
   "requirements_disk": "20",
   "requirements_swap": "2",
-  "requirements_configure_url": "https://www.magento.com/download.html",
+  "requirements_configure_url": "https://devdocs.magento.com/guides/v2.4/performance-best-practices/hardware.html",
   "components": "Magento, MySQL8.0, MongoDB, adminMongo on Docker, phpMyAdmin on Docker, Nginx or Apache(optional)",
   "install_way": {
-    "en": "Docker install",
-    "zh": "Docker 安装"
+    "en": "Isntallation for download binaries files ",
+    "zh": "下载可执行二进制包解压安装"
   },
-  "install_url": "https://hub.docker.com/r/bitnami/magento/tags?page=1&ordering=last_updated"
+  "install_url": "https://magento.com/tech-resources/download"
 }
