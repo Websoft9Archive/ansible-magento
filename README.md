@@ -19,7 +19,7 @@ System Requirement to install this repository are as following：
 | Private Cloud     | KVM, VMware, VirtualBox, OpenStack    | Optional                 |
 | Server Configuration | vCPU no less than 2 core, Memory no less than 4 GIB, Storage no less than 20 GB, Swap no less than 2GB |Bandwidth no less than 100M|
 
-To learn more information, please view [Installation & Configuration](https://www.magento.com/download.html).
+To learn more information, please view [Installation & Configuration](https://devdocs.magento.com/guides/v2.4/performance-best-practices/hardware.html).
 
 ## Ecosystem
 
@@ -62,7 +62,7 @@ This program provided by Websoft9 contains a series of software with separate co
 
 #### How to install and view the latest release?
 
-This repository install way is Docker install, you can  view the version from [Official URL](https://hub.docker.com/r/bitnami/magento/tags?page=1&ordering=last_updated).  
+This repository install way is Isntallation for download binaries files , you can  view the version from [Official URL](https://magento.com/tech-resources/download).  
 We will check [Release version](https://github.com/Websoft9/ansible-magento/releases) regularly. Update and test this project to ensure that users can successfully install the required version of Magento.
 
 #### Can I run this repository on Ansible Tower? 
