@@ -66,10 +66,10 @@ sudo php /data/wwwroot/magento/bin/magento module:disable Magento_TwoFactorAuth
 
 ```shell
 cd /data/wwwroot/magento
-php bin/magento config:set web/unsecure/base_url ‘http://www.abc.com’ #你的域名 或 https://www.abc.com
-php bin/magento config:set web/secure/base_url http://www.abc.com’
-php bin/magento config:set web/unsecure/base_link_url http://www.abc.com’
-php bin/magento config:set web/secure/base_link_url http://www.abc.com’
+php bin/magento config:set web/unsecure/base_url 'http://www.abc.com' #你的域名 或 https://www.abc.com
+php bin/magento config:set web/secure/base_url 'http://www.abc.com'
+php bin/magento config:set web/unsecure/base_link_url 'http://www.abc.com'
+php bin/magento config:set web/secure/base_link_url 'http://www.abc.com'
 php bin/magento config:set web/seo/use_rewrites 1
 php bin/magento config:set web/secure/use_in_frontend 1
 php bin/magento config:set web/secure/use_in_adminhtml 1
