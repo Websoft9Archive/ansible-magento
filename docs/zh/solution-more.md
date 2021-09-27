@@ -32,8 +32,8 @@ Magento 域名绑定操作步骤：
 4. 通过SSH连接云服务器，运行下面的CLI命令（同理，在配置完HTTPS后，只要将下面的地址 http 改成 https 即可）
    ```shell
    cd /data/wwwroot/magento
-   php bin/magento config:set web/unsecure/base_url http://www.mydomain.com # 修改成您的实际域名
-   php bin/magento config:set web/secure/base_url http://www.mydomain.com # 修改成您的实际域名
+   php bin/magento config:set web/unsecure/base_url http://www.mydomain.com/ # 修改成您的实际域名，必须以 / 结束
+   php bin/magento config:set web/secure/base_url http://www.mydomain.com/ # 修改成您的实际域名，必须以 / 结束
    ```
 
 
