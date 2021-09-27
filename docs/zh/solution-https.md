@@ -6,6 +6,15 @@ Magento 预装包，已安装Web服务器 SSL 模块和公共免费证书方案 
 
 ## 快速指南
 
+不管使用下面2种的哪种部署，在设置完服务器配置后，必须要完成Magento自身的配置，通过执行下面的命令：
+
+```
+cd /data/wwwroot/magento
+php bin/magento setup:store-config:set --use-secure=1 --use-secure-admin=1 --base-url-secure="https://www.yourdomain.com/"
+php bin/magento cache:flush  #将基础URL更改为https并刷新缓存
+```
+
+
 ### 自动部署
 
 如果没有申请证书，只需在服务器中运行一条命令`sudo certbot`便可以启动免费证书**自动**申请和部署
